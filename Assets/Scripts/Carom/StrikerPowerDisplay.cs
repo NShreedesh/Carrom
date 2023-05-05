@@ -22,7 +22,7 @@ namespace Scripts.Carom
             }
             
             Vector2 power = striker.GetPower();
-            float maxPower = Mathf.Max(power.x, power.y);
+            float maxPower = Mathf.Max(Mathf.Abs(power.x), Mathf.Abs(power.y));
             transform.localScale = new Vector2(maxPower, maxPower) * scaleUpTo;
         }
     }
