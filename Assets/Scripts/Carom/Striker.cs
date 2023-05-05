@@ -23,17 +23,45 @@ namespace Scripts.Carom
 
         [Header("Shooting Carom")]
         [SerializeField]
+        private bool isStrikerShot;
+        [SerializeField]
         private bool isDraggingStriker;
         [SerializeField]
         private Vector2 startMousePosition;
         [SerializeField]
         private Vector2 endMousePosition;
+        [SerializeField]
+        private Vector2 power;
+
+        [Header("Slider")]
+        [SerializeField]
+        private CaromSlider caromSlider;
+        [SerializeField]
+        private float caromSliderSpeed = 30;
 
         private void Update()
         {
+            ChangeStrikerWithSliderValue();
+            ShootStriker();
+        }
+
+        private void ChangeStrikerWithSliderValue()
+        {
+            if(isStrikerShot) return;
+            
+            float strikerTargetPosition = caromSlider.GetSliderValue();
+            Vector3 strikerCurrentPosition = transform.localPosition;
+            strikerCurrentPosition.x = Mathf.MoveTowards(strikerCurrentPosition.x, strikerTargetPosition, caromSliderSpeed * Time.deltaTime);
+            transform.localPosition = strikerCurrentPosition;
+        }
+        
+        private void ShootStriker()
+        {
+            if(isStrikerShot) return;
+            
             Vector3 worldMousePosition = camera.ScreenToWorldPoint(inputController.GetMousePosition());
-            RaycastHit2D hitInfo = Physics2D.Raycast(camera!.transform.position, 
-                worldMousePosition,
+            RaycastHit2D hitInfo = Physics2D.Raycast(worldMousePosition, 
+                Vector3.forward,
                 10, 
                 strikerLayerMask);
             
@@ -45,14 +73,21 @@ namespace Scripts.Carom
             }
             else if (inputController.GetMousePress().IsPressed())
             {
+                power = endMousePosition - startMousePosition;
+                power.x = Mathf.Clamp(power.x, -1, 1);
+                power.y = Mathf.Clamp(power.y, -1, 1);
                 endMousePosition = worldMousePosition;
             }
             else if(isDraggingStriker && !inputController.GetMousePress().WasPressedThisFrame())
             {
-                Vector2 force = endMousePosition - startMousePosition;
-                rb.AddForce(-force * shootForce, ForceMode2D.Impulse);
+                rb.AddForce(-power * shootForce, ForceMode2D.Impulse);
                 isDraggingStriker = false;
+                isStrikerShot = true;
             }
         }
+        
+        public Vector2 GetPower() => power;
+
+        public bool GetIsDragging() => isDraggingStriker;
     }
 }
