@@ -837,9 +837,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 839249662}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.21, y: -4.253, z: 0}
+  m_LocalPosition: {x: 4.242, y: -4.232, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 533251272}
   m_RootOrder: -1
@@ -876,9 +876,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.39152884, y: -0.17355394}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.49566102
+  m_Radius: 0.1
 --- !u!114 &839249665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -954,9 +954,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1011257084}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.234, y: 4.21, z: 0}
+  m_LocalPosition: {x: 4.242, y: 4.232, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 533251272}
   m_RootOrder: -1
@@ -993,9 +993,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.29191297, y: 0.4311329}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.54041904
+  m_Radius: 0.1
 --- !u!114 &1011257087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1316,9 +1316,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1247817890}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.301, y: 4.223, z: 0}
+  m_LocalPosition: {x: -4.242, y: 4.232, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 533251272}
   m_RootOrder: -1
@@ -1355,9 +1355,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.11423433, y: 0.2125175}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.40171683
+  m_Radius: 0.1
 --- !u!114 &1247817893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1488,9 +1488,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1843465656}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.28, y: -4.248, z: 0}
+  m_LocalPosition: {x: -4.242, y: -4.232, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 533251272}
   m_RootOrder: -1
@@ -1527,9 +1527,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.04308963, y: -0.09793103}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.35897934
+  m_Radius: 0.1
 --- !u!114 &1843465659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1917,11 +1917,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4787825121818677384, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.22363567
+      value: -1.9
       objectReference: {fileID: 0}
     - target: {fileID: 4787825121818677384, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.082237326
+      value: -1.24
       objectReference: {fileID: 0}
     - target: {fileID: 4787825121818677384, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
       propertyPath: m_LocalPosition.z
