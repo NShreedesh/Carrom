@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Scripts.Carom
 {
@@ -9,7 +8,7 @@ namespace Scripts.Carom
         {
             if (other.gameObject.TryGetComponent(out Coin coin))
             {
-                coin.SleepRigidbody();
+                coin.MakeInHole(transform);
             }
         }
     }
