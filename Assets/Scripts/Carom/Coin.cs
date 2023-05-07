@@ -5,13 +5,29 @@ namespace Scripts.Carom
 {
     public class Coin : MonoBehaviour
     {
+        [Header("Coin")]
         [SerializeField]
         private Rigidbody2D rb;
+        [SerializeField]
+        private new Collider2D collider;
 
-        public void MakeInHole(Transform target)
+        [Header("Enter Hole")]
+        [SerializeField]
+        private float holeEnterSpeed = 2;
+
+        private void OnTriggerEnter2D(Collider2D other)
         {
+            if (other.TryGetComponent(out CoinInHole coinInHole))
+            {
+                MakeInHole(coinInHole.transform);
+            }
+        }
+        
+        private void MakeInHole(Transform target)
+        {
+            collider.enabled = false;
+            rb.bodyType = RigidbodyType2D.Static;
             rb.Sleep();
-            transform.position = target.position;
             StartCoroutine(TakeToHole(target));
         }
 
@@ -19,9 +35,14 @@ namespace Scripts.Carom
         {
             while (transform.position != target.position)
             {
-                transform.position = Vector3.MoveTowards(transform.position, target.position, Time.deltaTime * 20);
+                rb.position = Vector3.MoveTowards(transform.position, target.position, Time.deltaTime * holeEnterSpeed);
                 yield return null;
             }
+        }
+
+        private void OnDisable()
+        {
+            StopAllCoroutines();
         }
     }
 }
