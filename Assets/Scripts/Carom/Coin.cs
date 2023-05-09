@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using Scripts.Audio;
+using Scripts.Extensions;
 using Scripts.Interfaces;
 using UnityEngine;
 
@@ -8,6 +9,10 @@ namespace Scripts.Carom
 {
     public class Coin : MonoBehaviour, IHitEffect
     {
+        [Header("Components")]
+        [SerializeField]
+        private SpriteRenderer spriteRenderer;
+        
         [Header("Coin")]
         [SerializeField]
         private Rigidbody2D rb;
@@ -17,6 +22,8 @@ namespace Scripts.Carom
         [Header("Enter Hole")]
         [SerializeField]
         private float holeEnterSpeed = 10;
+        [SerializeField]
+        private Vector3 coinInHoleScale;
 
         [Header("Audio")]
         [SerializeField]
@@ -54,6 +61,10 @@ namespace Scripts.Carom
                 rb.position = Vector3.MoveTowards(transform.position, target.position, Time.deltaTime * holeEnterSpeed);
                 yield return null;
             }
+            spriteRenderer.ChangeAlpha(0.5f);
+            transform.localScale = coinInHoleScale;
+            
+            yield return new WaitForSeconds(2);
             striker?.SetCanResetStriker(true);
         }
 

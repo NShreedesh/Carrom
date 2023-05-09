@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Scripts.Extensions;
 using Scripts.InputControls;
 using Scripts.Interfaces;
 using UnityEngine;
@@ -12,6 +12,8 @@ namespace Scripts.Carom
         private InputController inputController;
         [SerializeField]
         private new CircleCollider2D collider;
+        [SerializeField]
+        private SpriteRenderer spriteRenderer;
         
         [Header(("Raycast"))]
         [SerializeField]
@@ -28,6 +30,8 @@ namespace Scripts.Carom
         [Header("Shooting Carom")]
         [SerializeField]
         private Vector3 strikerDefaultPosition;
+        [SerializeField]
+        private Vector3 strikerDefaultScale;
         [SerializeField]
         private bool isStrikerShot;
         [SerializeField]
@@ -53,6 +57,7 @@ namespace Scripts.Carom
         private void Start()
         {
             strikerDefaultPosition = transform.position;
+            strikerDefaultScale = transform.localScale;
             collider.isTrigger = true;
         }
 
@@ -112,11 +117,13 @@ namespace Scripts.Carom
             if(!canResetStriker) return;
 
             caromSlider.ResetSliderValue();
+            spriteRenderer.ChangeAlpha(1);
             canResetStriker = false;
             collider.enabled = true;
             collider.isTrigger = true;
             rb.bodyType = RigidbodyType2D.Dynamic;
             transform.position = strikerDefaultPosition;
+            transform.localScale = strikerDefaultScale;
             isStrikerShot = false;
         }
         

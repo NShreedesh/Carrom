@@ -194,6 +194,22 @@ PrefabInstance:
       propertyPath: strikeHitClip
       value: 
       objectReference: {fileID: 8300000, guid: 4461e913f7ed4e34a9e174d64ad154f4, type: 3}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 774263251}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: coinInHoleScale.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: coinInHoleScale.y
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: coinInHoleScale.z
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 9000302265941258646, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -573,6 +589,22 @@ PrefabInstance:
       propertyPath: strikeHitClip
       value: 
       objectReference: {fileID: 8300000, guid: 4461e913f7ed4e34a9e174d64ad154f4, type: 3}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 1205891244}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: coinInHoleScale.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: coinInHoleScale.y
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: coinInHoleScale.z
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 9000302265941258646, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -909,6 +941,22 @@ PrefabInstance:
       propertyPath: strikeHitClip
       value: 
       objectReference: {fileID: 8300000, guid: 4461e913f7ed4e34a9e174d64ad154f4, type: 3}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 1920678197}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: coinInHoleScale.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: coinInHoleScale.y
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: coinInHoleScale.z
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 9000302265941258646, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -1170,6 +1218,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!212 &774263251 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4779065229334459191, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+  m_PrefabInstance: {fileID: 84738009}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &793415104 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9000302265941258646, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
@@ -1334,6 +1387,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!212 &923791602 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2468355035868792453, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
+  m_PrefabInstance: {fileID: 5920347916492286515}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1011257084
 GameObject:
   m_ObjectHideFlags: 0
@@ -1502,6 +1560,11 @@ Transform:
 --- !u!4 &1127697343 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9000302265941258646, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+  m_PrefabInstance: {fileID: 1365631382}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1127697347 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4779065229334459191, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
   m_PrefabInstance: {fileID: 1365631382}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1134129611
@@ -1714,6 +1777,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ae3fc6dc7f48f6b82a6661b887ddc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!212 &1205891244 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4779065229334459191, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+  m_PrefabInstance: {fileID: 432078948}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1247817890
 GameObject:
   m_ObjectHideFlags: 0
@@ -1819,6 +1887,22 @@ PrefabInstance:
       propertyPath: strikeHitClip
       value: 
       objectReference: {fileID: 8300000, guid: 4461e913f7ed4e34a9e174d64ad154f4, type: 3}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 1127697347}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: coinInHoleScale.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: coinInHoleScale.y
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: coinInHoleScale.z
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 9000302265941258646, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -1868,6 +1952,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+--- !u!212 &1482962241 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4779065229334459191, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+  m_PrefabInstance: {fileID: 2123816777}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1529133637
 GameObject:
   m_ObjectHideFlags: 0
@@ -1958,9 +2047,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ae3fc6dc7f48f6b82a6661b887ddc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!212 &1540684214 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4779065229334459191, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+  m_PrefabInstance: {fileID: 2077345458}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1756253475 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9000302265941258646, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+  m_PrefabInstance: {fileID: 2105449403}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1756253479 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4779065229334459191, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
   m_PrefabInstance: {fileID: 2105449403}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1804845728 stripped
@@ -2053,6 +2152,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9000302265941258646, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
   m_PrefabInstance: {fileID: 581030608}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &1920678197 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4779065229334459191, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+  m_PrefabInstance: {fileID: 581030608}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1929798553
 GameObject:
   m_ObjectHideFlags: 0
@@ -2143,9 +2247,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ae3fc6dc7f48f6b82a6661b887ddc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!212 &1932440475 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3091616273470811482, guid: fb11763d44689804baf6edf7e3b325c5, type: 3}
+  m_PrefabInstance: {fileID: 3877771481552826845}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1957105770 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9000302265941258646, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+  m_PrefabInstance: {fileID: 7528176858798881188}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1957105774 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4779065229334459191, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
   m_PrefabInstance: {fileID: 7528176858798881188}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2077345458
@@ -2168,6 +2282,22 @@ PrefabInstance:
       propertyPath: strikeHitClip
       value: 
       objectReference: {fileID: 8300000, guid: 4461e913f7ed4e34a9e174d64ad154f4, type: 3}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 1540684214}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: coinInHoleScale.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: coinInHoleScale.y
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: coinInHoleScale.z
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 9000302265941258646, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -2417,6 +2547,22 @@ PrefabInstance:
       propertyPath: strikeHitClip
       value: 
       objectReference: {fileID: 8300000, guid: 4461e913f7ed4e34a9e174d64ad154f4, type: 3}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 1756253479}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: coinInHoleScale.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: coinInHoleScale.y
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: coinInHoleScale.z
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 9000302265941258646, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -2486,6 +2632,22 @@ PrefabInstance:
       propertyPath: strikeHitClip
       value: 
       objectReference: {fileID: 8300000, guid: 4461e913f7ed4e34a9e174d64ad154f4, type: 3}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 1482962241}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: coinInHoleScale.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: coinInHoleScale.y
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: coinInHoleScale.z
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 9000302265941258646, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -2551,6 +2713,22 @@ PrefabInstance:
       propertyPath: strikeHitClip
       value: 
       objectReference: {fileID: 8300000, guid: 4461e913f7ed4e34a9e174d64ad154f4, type: 3}
+    - target: {fileID: 58756301762401222, guid: fb11763d44689804baf6edf7e3b325c5, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 1932440475}
+    - target: {fileID: 58756301762401222, guid: fb11763d44689804baf6edf7e3b325c5, type: 3}
+      propertyPath: coinInHoleScale.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 58756301762401222, guid: fb11763d44689804baf6edf7e3b325c5, type: 3}
+      propertyPath: coinInHoleScale.y
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 58756301762401222, guid: fb11763d44689804baf6edf7e3b325c5, type: 3}
+      propertyPath: coinInHoleScale.z
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 6905253617695139176, guid: fb11763d44689804baf6edf7e3b325c5, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -2624,6 +2802,22 @@ PrefabInstance:
       propertyPath: strikeHitClip
       value: 
       objectReference: {fileID: 8300000, guid: 4461e913f7ed4e34a9e174d64ad154f4, type: 3}
+    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 923791602}
+    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
+      propertyPath: coinInHoleScale.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
+      propertyPath: coinInHoleScale.y
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
+      propertyPath: coinInHoleScale.z
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 2636821291789312828, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
       propertyPath: m_Radius
       value: 0.6599357
@@ -2697,6 +2891,22 @@ PrefabInstance:
       propertyPath: strikeHitClip
       value: 
       objectReference: {fileID: 8300000, guid: 4461e913f7ed4e34a9e174d64ad154f4, type: 3}
+    - target: {fileID: 60024141050668041, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 7049129920828302022}
+    - target: {fileID: 60024141050668041, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
+      propertyPath: coinInHoleScale.x
+      value: 0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 60024141050668041, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
+      propertyPath: coinInHoleScale.y
+      value: 0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 60024141050668041, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
+      propertyPath: coinInHoleScale.z
+      value: 0.13
+      objectReference: {fileID: 0}
     - target: {fileID: 1069249607195401020, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
       propertyPath: m_Radius
       value: 1.0044383
@@ -2770,6 +2980,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 170577391}
     - target: {fileID: 6105534568271033278, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 7049129920828302022}
+    - target: {fileID: 6105534568271033278, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
       propertyPath: canResetStriker
       value: 0
       objectReference: {fileID: 0}
@@ -2777,6 +2991,10 @@ PrefabInstance:
       propertyPath: inputController
       value: 
       objectReference: {fileID: 1143759406}
+    - target: {fileID: 6105534568271033278, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
+      propertyPath: strikerDefaultTransform
+      value: 
+      objectReference: {fileID: 80897496}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2796,6 +3014,11 @@ MonoBehaviour:
 --- !u!58 &7049129920828302019 stripped
 CircleCollider2D:
   m_CorrespondingSourceObject: {fileID: 1069249607195401020, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
+  m_PrefabInstance: {fileID: 7049129920828302013}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &7049129920828302022 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 15430884314347289, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
   m_PrefabInstance: {fileID: 7049129920828302013}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7528176858798881188
@@ -2822,6 +3045,22 @@ PrefabInstance:
       propertyPath: strikeHitClip
       value: 
       objectReference: {fileID: 8300000, guid: 4461e913f7ed4e34a9e174d64ad154f4, type: 3}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 1957105774}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: coinInHoleScale.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: coinInHoleScale.y
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: coinInHoleScale.z
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 9000302265941258646, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
       propertyPath: m_RootOrder
       value: -1
