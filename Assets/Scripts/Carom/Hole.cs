@@ -2,7 +2,7 @@
 
 namespace Scripts.Carom
 {
-    public class CoinInHole : MonoBehaviour
+    public class Hole : MonoBehaviour
     {
        
     }

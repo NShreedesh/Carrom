@@ -13,5 +13,10 @@ namespace Scripts.Carom
         {
             return slider.value;
         }
+        
+        public void ResetSliderValue()
+        {
+            slider.value = 0;
+        }
     }
 }

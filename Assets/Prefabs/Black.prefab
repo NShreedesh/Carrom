@@ -162,3 +162,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 422591985244942486}
+  collider: {fileID: 3096107390305062659}
+  holeEnterSpeed: 10
+  strikeHitClip: {fileID: 8300000, guid: 1a3e7494982f5a34baf053b7aad457bf, type: 3}
