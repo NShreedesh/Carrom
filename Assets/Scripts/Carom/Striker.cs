@@ -108,6 +108,7 @@ namespace Scripts.Carom
             else if (isDraggingStriker && !inputController.GetMousePress().WasPressedThisFrame())
             {
                 rb.AddForce(-power * shootForce, ForceMode2D.Impulse);
+                caromSlider.DisableSlider();
                 isDraggingStriker = false;
                 isStrikerShot = true;
                 canResetStriker = true;
@@ -120,9 +121,10 @@ namespace Scripts.Carom
             if (rb.velocity.magnitude > 0.02f) return;
             if(!canResetStriker) return;
 
-            if (coins.Any(coin => coin.GetVelocity() > 0.02f)) return;
+            if (coins.Any(coin => coin.GetVelocity() > 0)) return;
 
             GameManager.Instance.SetCurrentPlayerTurn();
+            caromSlider.EnableSlider();
             caromSlider.ResetSliderValue();
             spriteRenderer.ChangeAlpha(1);
             canResetStriker = false;
@@ -132,6 +134,7 @@ namespace Scripts.Carom
             transform.position = strikerDefaultPosition;
             transform.localScale = strikerDefaultScale;
             isStrikerShot = false;
+            caromSlider.EnableSlider();
         }
         
         public Vector2 GetPower() => power;

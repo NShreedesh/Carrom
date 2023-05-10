@@ -9,14 +9,12 @@ namespace Scripts.Carom
         [SerializeField]
         private Slider slider;
 
-        public float GetSliderValue()
-        {
-            return slider.value;
-        }
-        
-        public void ResetSliderValue()
-        {
-            slider.value = 0;
-        }
+        public float GetSliderValue() => slider.value;
+
+        public void ResetSliderValue() => slider.value = 0;
+
+        public void DisableSlider() => slider.interactable = false;
+
+        public void EnableSlider() => slider.interactable = true;
     }
 }
