@@ -121,7 +121,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.69
+  m_Radius: 0.6556664
 --- !u!50 &422591985244942486
 Rigidbody2D:
   serializedVersion: 4
@@ -161,7 +161,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4388828344565334bb6928d2a2cad041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 4779065229334459191}
   rb: {fileID: 422591985244942486}
   collider: {fileID: 3096107390305062659}
   holeEnterSpeed: 10
-  strikeHitClip: {fileID: 8300000, guid: 1a3e7494982f5a34baf053b7aad457bf, type: 3}
+  coinInHoleScale: {x: 0.15, y: 0.15, z: 0.15}
+  strikeHitClip: {fileID: 8300000, guid: 4461e913f7ed4e34a9e174d64ad154f4, type: 3}

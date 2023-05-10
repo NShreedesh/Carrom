@@ -1,6 +1,8 @@
-﻿using Scripts.Extensions;
+﻿using System.Linq;
+using Scripts.Extensions;
 using Scripts.InputControls;
 using Scripts.Interfaces;
+using Scripts.Manager;
 using UnityEngine;
 
 namespace Scripts.Carom
@@ -53,6 +55,8 @@ namespace Scripts.Carom
         [Header("Reset Striker")]
         [SerializeField]
         private bool canResetStriker;
+        [SerializeField]
+        private Coin[] coins;
 
         private void Start()
         {
@@ -116,6 +120,9 @@ namespace Scripts.Carom
             if (rb.velocity.magnitude > 0.02f) return;
             if(!canResetStriker) return;
 
+            if (coins.Any(coin => coin.GetVelocity() > 0.02f)) return;
+
+            GameManager.Instance.SetCurrentPlayerTurn();
             caromSlider.ResetSliderValue();
             spriteRenderer.ChangeAlpha(1);
             canResetStriker = false;

@@ -1,8 +1,8 @@
 using System;
 using System.Collections;
-using Scripts.Audio;
 using Scripts.Extensions;
 using Scripts.Interfaces;
+using Scripts.Manager;
 using UnityEngine;
 
 namespace Scripts.Carom
@@ -56,18 +56,24 @@ namespace Scripts.Carom
         {
             TryGetComponent(out Striker striker);
             striker?.SetCanResetStriker(false);
+            
+            spriteRenderer.ChangeAlpha(0.5f);
+            transform.localScale = coinInHoleScale;
             while (Math.Abs(transform.position.x - target.position.x) != 0)
             {
                 rb.position = Vector3.MoveTowards(transform.position, target.position, Time.deltaTime * holeEnterSpeed);
                 yield return null;
             }
-            spriteRenderer.ChangeAlpha(0.5f);
-            transform.localScale = coinInHoleScale;
             
             yield return new WaitForSeconds(2);
             striker?.SetCanResetStriker(true);
         }
 
+        public float GetVelocity()
+        {
+            return rb.velocity.magnitude;
+        }
+        
         private void OnDisable()
         {
             StopAllCoroutines();
