@@ -8,13 +8,14 @@ namespace Scripts.Manager
         [field: Header("Instance")]
         public static GameManager Instance { get; private set; }
 
-        [FormerlySerializedAs("howManyPlayerGame")]
         [Header("Values")]
         [SerializeField]
         [Range(1, 4)]
         private int playerInGame = 2;
         [SerializeField]
         private int currentPlayerTurn = 0;
+        [SerializeField]
+        private bool isHoled;
 
         private void Awake()
         {
@@ -30,9 +31,16 @@ namespace Scripts.Manager
         }
         
         public int GetCurrentPlayerTurn() => currentPlayerTurn;
-
+        
+        public bool SetIsHoled(bool value) => isHoled = value;
+        
         public void SetCurrentPlayerTurn()
         {
+            if (isHoled)
+            {
+                isHoled = false;
+                return;
+            }
             currentPlayerTurn = (++currentPlayerTurn) % playerInGame;
         }
     }

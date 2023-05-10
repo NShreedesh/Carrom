@@ -99,7 +99,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 3900122682866847610}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 9ddd979a9e08d554381ad6c0087ca66c, type: 2}
+  m_Material: {fileID: 6200000, guid: aade9d8eb922dd6489bc2df736974af7, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -137,9 +137,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 2
-  m_LinearDrag: 5
-  m_AngularDrag: 5
+  m_Mass: 3
+  m_LinearDrag: 2.5
+  m_AngularDrag: 1
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -173,15 +173,19 @@ MonoBehaviour:
     m_Bits: 64
   rb: {fileID: 4830177259820499952}
   shootForce: 80
-  strikerDefaultPosition: {x: 0, y: 0, z: 0}
   strikerDefaultScale: {x: 0, y: 0, z: 0}
   isStrikerShot: 0
   isDraggingStriker: 0
   startMousePosition: {x: 0, y: 0}
   endMousePosition: {x: 0, y: 0}
   power: {x: 0, y: 0}
-  caromSlider: {fileID: 0}
+  caromSliders:
+  - {fileID: 0}
+  - {fileID: 0}
   caromSliderSpeed: 20
+  playerStrikerPositions:
+  - {x: 0, y: -2.22, z: 0}
+  - {x: 0, y: 1.26, z: 0}
   canResetStriker: 0
   coins:
   - {fileID: 0}

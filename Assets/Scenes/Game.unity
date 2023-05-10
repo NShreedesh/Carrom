@@ -2108,7 +2108,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.093049124, g: 0.4811321, b: 0.47729152, a: 1}
+  m_Color: {r: 0.036845844, g: 0.11320752, b: 0.0787216, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2453,6 +2453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInGame: 2
   currentPlayerTurn: 0
+  isHoled: 0
 --- !u!1 &1167050586
 GameObject:
   m_ObjectHideFlags: 0
@@ -3822,10 +3823,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 519420031}
     - target: {fileID: 6105534568271033278, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
-      propertyPath: caromSlider
-      value: 
-      objectReference: {fileID: 170577391}
-    - target: {fileID: 6105534568271033278, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
       propertyPath: inputController
       value: 
       objectReference: {fileID: 1143759406}
@@ -3906,22 +3903,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1111897341}
     - target: {fileID: 6105534568271033278, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
-      propertyPath: caromSlider.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6105534568271033278, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
-      propertyPath: caromSliders.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6105534568271033278, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
-      propertyPath: caromSlider.Array.data[0]
-      value: 
-      objectReference: {fileID: 170577391}
-    - target: {fileID: 6105534568271033278, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
-      propertyPath: caromSlider.Array.data[1]
-      value: 
-      objectReference: {fileID: 947324030}
-    - target: {fileID: 6105534568271033278, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
       propertyPath: caromSliders.Array.data[0]
       value: 
       objectReference: {fileID: 170577391}
@@ -3929,18 +3910,6 @@ PrefabInstance:
       propertyPath: caromSliders.Array.data[1]
       value: 
       objectReference: {fileID: 947324030}
-    - target: {fileID: 6105534568271033278, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
-      propertyPath: playerStrikerPositions.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6105534568271033278, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
-      propertyPath: playerStrikerPositions.Array.data[0].y
-      value: -2.22
-      objectReference: {fileID: 0}
-    - target: {fileID: 6105534568271033278, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
-      propertyPath: playerStrikerPositions.Array.data[1].y
-      value: 1.26
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

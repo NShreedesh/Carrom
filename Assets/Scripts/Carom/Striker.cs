@@ -4,7 +4,6 @@ using Scripts.InputControls;
 using Scripts.Interfaces;
 using Scripts.Manager;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Scripts.Carom
 {
@@ -155,9 +154,7 @@ namespace Scripts.Carom
         public Vector2 GetPower() => power;
 
         public bool GetIsDragging() => isDraggingStriker;
-        
-        public bool GetCanResetStriker() => canResetStriker;
-        
+
         public bool SetCanResetStriker(bool value) => canResetStriker = value;
     }
 }
