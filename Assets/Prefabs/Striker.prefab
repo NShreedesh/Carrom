@@ -210,7 +210,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 15430884314347289}
   rb: {fileID: 4830177259820499952}
   collider: {fileID: 1069249607195401020}
-  holeEnterSpeed: 10
+  holeEnterSpeed: 25
   coinInHoleScale: {x: 0.4, y: 0.4, z: 0.4}
   strikeHitClip: {fileID: 8300000, guid: 4461e913f7ed4e34a9e174d64ad154f4, type: 3}
 --- !u!1 &4737949686774559053
