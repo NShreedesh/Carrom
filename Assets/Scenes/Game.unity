@@ -3627,6 +3627,10 @@ PrefabInstance:
       propertyPath: coins.Array.data[18]
       value: 
       objectReference: {fileID: 1111897341}
+    - target: {fileID: 6264790995969608479, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
+      propertyPath: scaleUpTo
+      value: 3.4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

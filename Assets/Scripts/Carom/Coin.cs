@@ -65,8 +65,13 @@ namespace Scripts.Carom
                 yield return null;
             }
             
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(1);
             striker?.SetCanResetStriker(true);
+            yield return new WaitForSeconds(2);
+            if (!striker)
+            {
+                gameObject.SetActive(false);
+            }
         }
 
         public float GetVelocity()
