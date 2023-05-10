@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a2fef99560a42c247ada1aea05120ee6
+guid: fa1e13320ec653c419a0c1121959f6b9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -119,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: red
+      name: carromboard_0
       rect:
         serializedVersion: 2
-        x: 525
-        y: 895
-        width: 136
-        height: 143
+        x: 114
+        y: 198
+        width: 625
+        height: 631
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,71 +133,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2caee9d01ecead4c8ad8017a32fcbd5
-      internalID: -631214071
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: white
-      rect:
-        serializedVersion: 2
-        x: 443
-        y: 723
-        width: 135
-        height: 136
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2303e40bc9d059f4a83d8d90d3815caf
-      internalID: 1801136825
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: black
-      rect:
-        serializedVersion: 2
-        x: 617
-        y: 728
-        width: 136
-        height: 138
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d385faa2dd71ae04c8d58245e8142716
-      internalID: -1362121194
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: striker
-      rect:
-        serializedVersion: 2
-        x: 498
-        y: 395
-        width: 203
-        height: 203
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1c3e2aeaa72ac274880e62159dca70c5
-      internalID: 2039448510
+      spriteID: 3e10c7e7455028f448965300979bf9ec
+      internalID: -1854945938
       vertices: []
       indices: 
       edges: []
@@ -213,10 +150,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      black: -1362121194
-      red: -631214071
-      striker: 2039448510
-      white: 1801136825
+      carromboard_0: -1854945938
+      carromboard_1: 1343283647
+      carromboard_2: -636000539
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

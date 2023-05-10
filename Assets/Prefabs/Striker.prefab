@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 3900122682866847610}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.16, y: 0.16, z: 0.16}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 165655059328672756}
@@ -79,12 +79,12 @@ SpriteRenderer:
   m_SortingLayerID: 884089619
   m_SortingLayer: 3
   m_SortingOrder: 2
-  m_Sprite: {fileID: 2039448510, guid: a2fef99560a42c247ada1aea05120ee6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86342d09ab1d438499dc6daf15bd87a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.03, y: 2.03}
+  m_Size: {x: 0.76, y: 0.75}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -124,7 +124,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.015
+  m_Radius: 0.34506556
 --- !u!50 &4830177259820499952
 Rigidbody2D:
   serializedVersion: 4
@@ -137,11 +137,11 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 2
   m_LinearDrag: 5
-  m_AngularDrag: 0.1
+  m_AngularDrag: 5
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ed12bfe799f7ea743a4300767a057234, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -165,19 +165,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputController: {fileID: 0}
+  collider: {fileID: 1069249607195401020}
+  spriteRenderer: {fileID: 15430884314347289}
   camera: {fileID: 0}
   strikerLayerMask:
     serializedVersion: 2
     m_Bits: 64
   rb: {fileID: 4830177259820499952}
-  shootForce: 38
+  shootForce: 100
+  strikerDefaultPosition: {x: 0, y: 0, z: 0}
+  strikerDefaultScale: {x: 0, y: 0, z: 0}
   isStrikerShot: 0
   isDraggingStriker: 0
   startMousePosition: {x: 0, y: 0}
   endMousePosition: {x: 0, y: 0}
   power: {x: 0, y: 0}
   caromSlider: {fileID: 0}
-  caromSliderSpeed: 30
+  caromSliderSpeed: 20
+  canResetStriker: 0
+  coins:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 60024141050668041}
 --- !u!114 &60024141050668041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,10 +207,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4388828344565334bb6928d2a2cad041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 15430884314347289}
   rb: {fileID: 4830177259820499952}
   collider: {fileID: 1069249607195401020}
   holeEnterSpeed: 10
-  strikeHitClip: {fileID: 8300000, guid: 1a3e7494982f5a34baf053b7aad457bf, type: 3}
+  coinInHoleScale: {x: 0.4, y: 0.4, z: 0.4}
+  strikeHitClip: {fileID: 8300000, guid: 4461e913f7ed4e34a9e174d64ad154f4, type: 3}
 --- !u!1 &4737949686774559053
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,7 +382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   striker: {fileID: 6105534568271033278}
   lineRenderer: {fileID: 7516582906535908490}
-  scaleUpTo: 5
+  scaleUpTo: 1
 --- !u!1 &5341417304951329674
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,7 +410,7 @@ Transform:
   m_GameObject: {fileID: 5341417304951329674}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1660191046821216585}
@@ -462,4 +481,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   striker: {fileID: 6105534568271033278}
-  scaleUpTo: 10
+  scaleUpTo: 2
