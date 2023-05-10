@@ -4,6 +4,7 @@ using Scripts.InputControls;
 using Scripts.Interfaces;
 using Scripts.Manager;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Scripts.Carom
 {
@@ -31,8 +32,6 @@ namespace Scripts.Carom
 
         [Header("Shooting Carom")]
         [SerializeField]
-        private Vector3 strikerDefaultPosition;
-        [SerializeField]
         private Vector3 strikerDefaultScale;
         [SerializeField]
         private bool isStrikerShot;
@@ -48,11 +47,13 @@ namespace Scripts.Carom
 
         [Header("Slider")]
         [SerializeField]
-        private CaromSlider caromSlider;
+        private CaromSlider[] caromSliders;
         [SerializeField]
         private float caromSliderSpeed = 30;
 
         [Header("Reset Striker")]
+        [SerializeField]
+        private Vector3[] playerStrikerPositions;
         [SerializeField]
         private bool canResetStriker;
         [SerializeField]
@@ -60,7 +61,8 @@ namespace Scripts.Carom
 
         private void Start()
         {
-            strikerDefaultPosition = transform.position;
+            EnableDisableSlider();
+            
             strikerDefaultScale = transform.localScale;
             collider.isTrigger = true;
         }
@@ -76,7 +78,7 @@ namespace Scripts.Carom
         {
             if(isStrikerShot) return;
             
-            float strikerTargetPosition = caromSlider.GetSliderValue();
+            float strikerTargetPosition = caromSliders[GameManager.Instance.GetCurrentPlayerTurn()].GetSliderValue();
             Vector3 strikerCurrentPosition = transform.localPosition;
             strikerCurrentPosition.x = Mathf.MoveTowards(strikerCurrentPosition.x, strikerTargetPosition, caromSliderSpeed * Time.deltaTime);
             transform.localPosition = strikerCurrentPosition;
@@ -108,7 +110,7 @@ namespace Scripts.Carom
             else if (isDraggingStriker && !inputController.GetMousePress().WasPressedThisFrame())
             {
                 rb.AddForce(-power * shootForce, ForceMode2D.Impulse);
-                caromSlider.DisableSlider();
+                caromSliders[GameManager.Instance.GetCurrentPlayerTurn()].DisableSlider();
                 isDraggingStriker = false;
                 isStrikerShot = true;
                 canResetStriker = true;
@@ -124,17 +126,30 @@ namespace Scripts.Carom
             if (coins.Any(coin => coin.GetVelocity() > 0)) return;
 
             GameManager.Instance.SetCurrentPlayerTurn();
-            caromSlider.EnableSlider();
-            caromSlider.ResetSliderValue();
+            caromSliders[GameManager.Instance.GetCurrentPlayerTurn()].EnableSlider();
+            caromSliders[GameManager.Instance.GetCurrentPlayerTurn()].ResetSliderValue();
+            SetStrikerPosition();
             spriteRenderer.ChangeAlpha(1);
             canResetStriker = false;
             collider.enabled = true;
             collider.isTrigger = true;
             rb.bodyType = RigidbodyType2D.Dynamic;
-            transform.position = strikerDefaultPosition;
             transform.localScale = strikerDefaultScale;
             isStrikerShot = false;
-            caromSlider.EnableSlider();
+        }
+
+        private void EnableDisableSlider()
+        {
+            foreach (CaromSlider slider in caromSliders)
+            {
+                slider.DisableSlider();
+            }
+            caromSliders[GameManager.Instance.GetCurrentPlayerTurn()].EnableSlider();
+        }
+
+        private void SetStrikerPosition()
+        {
+            transform.position = playerStrikerPositions[GameManager.Instance.GetCurrentPlayerTurn()];
         }
         
         public Vector2 GetPower() => power;

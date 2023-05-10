@@ -30,13 +30,13 @@ Transform:
   m_GameObject: {fileID: 3900122682866847610}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 165655059328672756}
   - {fileID: 882160620939816005}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &15430884314347289
 SpriteRenderer:
@@ -99,7 +99,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 3900122682866847610}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 9ddd979a9e08d554381ad6c0087ca66c, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -141,7 +141,7 @@ Rigidbody2D:
   m_LinearDrag: 5
   m_AngularDrag: 5
   m_GravityScale: 0
-  m_Material: {fileID: 6200000, guid: ed12bfe799f7ea743a4300767a057234, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -172,7 +172,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   rb: {fileID: 4830177259820499952}
-  shootForce: 100
+  shootForce: 80
   strikerDefaultPosition: {x: 0, y: 0, z: 0}
   strikerDefaultScale: {x: 0, y: 0, z: 0}
   isStrikerShot: 0
@@ -194,7 +194,15 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 60024141050668041}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &60024141050668041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481,4 +489,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   striker: {fileID: 6105534568271033278}
-  scaleUpTo: 2
+  scaleUpTo: 3.4
