@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Scripts.Manager
@@ -7,6 +8,8 @@ namespace Scripts.Manager
         [SerializeField]
         private int[] score;
 
+        public static Action<int> OnScoreUISet;
+        
         private void Awake()
         {
             score = new int[GameManager.Instance.GetPlayerInGame()];
@@ -14,12 +17,18 @@ namespace Scripts.Manager
 
         public int GetScore(int playerNumber) => score[playerNumber];
 
-        public int SetScore(int playerNumber, int incrementScore)
+        public void SetScore(int playerNumber, int incrementScore)
         {
             int updatedScore = score[playerNumber] + incrementScore;
-            if (updatedScore <= 0) return 0;
-            score[playerNumber] = updatedScore;
-            return score[playerNumber];
+            if (updatedScore <= 0)
+            {
+                score[playerNumber] = 0;
+            }
+            else
+            {
+                score[playerNumber] = updatedScore;
+            }
+            OnScoreUISet?.Invoke(score[playerNumber]);
         } 
     }
 }

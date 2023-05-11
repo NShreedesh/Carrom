@@ -148,7 +148,7 @@ namespace Scripts.Carom
 
         private void SetStrikerPosition()
         {
-            transform.position = playerStrikerPositions[GameManager.Instance.GetCurrentPlayerTurn()];
+            transform.localPosition = playerStrikerPositions[GameManager.Instance.GetCurrentPlayerTurn()];
         }
         
         public Vector2 GetPower() => power;
