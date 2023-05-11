@@ -72,11 +72,7 @@ namespace Scripts.Carom
                 rb.position = Vector3.MoveTowards(transform.position, target.position, Time.deltaTime * holeEnterSpeed);
                 yield return null;
             }
-
-            if (!striker)
-            {
-                GameManager.Instance.SetIsHoled(true);
-            }
+            GameManager.Instance.SetIsHoled(!striker);
             yield return new WaitForSeconds(1);
             striker?.SetCanResetStriker(true);
             yield return new WaitForSeconds(2);

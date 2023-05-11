@@ -1341,7 +1341,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4461e913f7ed4e34a9e174d64ad154f4, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2565,7 +2565,7 @@ MonoBehaviour:
   blackCoinScore: 10
   whiteCoinScore: 20
   redCoinScore: 50
-  strikerCoinScore: -10
+  strikerCoinScore: 0
 --- !u!1 &1134129611
 GameObject:
   m_ObjectHideFlags: 0
@@ -2734,6 +2734,7 @@ MonoBehaviour:
   currentPlayerTurn: 0
   isHoled: 0
   wonPlayer: -1
+  gameState: 0
 --- !u!1 &1167050586
 GameObject:
   m_ObjectHideFlags: 0

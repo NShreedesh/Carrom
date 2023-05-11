@@ -55,7 +55,7 @@ namespace Scripts.Manager
             }
             OnScoreUISet?.Invoke(score[playerNumber], totalScoreToWin);
 
-            if (score[playerNumber] > totalScoreToWin)
+            if (score[playerNumber] >= totalScoreToWin)
                 OnTotalScoreReached?.Invoke(playerNumber);
         } 
     }
