@@ -1791,7 +1791,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.05
+  m_Radius: 0.01
 --- !u!114 &839249665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2179,7 +2179,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.05
+  m_Radius: 0.01
 --- !u!114 &1011257087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2561,6 +2561,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 
+  totalScoreToWin: 160
+  blackCoinScore: 10
+  whiteCoinScore: 20
+  redCoinScore: 50
+  strikerCoinScore: -10
 --- !u!1 &1134129611
 GameObject:
   m_ObjectHideFlags: 0
@@ -2728,6 +2733,7 @@ MonoBehaviour:
   playerInGame: 2
   currentPlayerTurn: 0
   isHoled: 0
+  wonPlayer: -1
 --- !u!1 &1167050586
 GameObject:
   m_ObjectHideFlags: 0
@@ -2966,7 +2972,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.05
+  m_Radius: 0.01
 --- !u!114 &1247817893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3733,7 +3739,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.05
+  m_Radius: 0.01
 --- !u!114 &1843465659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4510,10 +4516,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 519420031}
     - target: {fileID: 6105534568271033278, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
-      propertyPath: canResetStriker
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6105534568271033278, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
       propertyPath: inputController
       value: 
       objectReference: {fileID: 1143759406}
@@ -4601,10 +4603,6 @@ PrefabInstance:
       propertyPath: caromSliders.Array.data[1]
       value: 
       objectReference: {fileID: 947324030}
-    - target: {fileID: 6105534568271033278, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
-      propertyPath: playerStrikerPositions.Array.data[1].y
-      value: 1.26
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

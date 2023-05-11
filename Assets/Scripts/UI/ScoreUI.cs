@@ -18,10 +18,10 @@ namespace Scripts.UI
             ScoreManager.OnScoreUISet += SetScoreUI;
         }
 
-        private void SetScoreUI(int score)
+        private void SetScoreUI(int score, int totalScore)
         {
             if(GameManager.Instance.GetCurrentPlayerTurn() == playerNumber)
-                scoreText.text = $"{score.ToString()}/160";
+                scoreText.text = $"{score.ToString()}/{totalScore}";
         }
 
         private void OnDisable()

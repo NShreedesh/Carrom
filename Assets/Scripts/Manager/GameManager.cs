@@ -1,5 +1,6 @@
+using System;
+using Scripts.Enums;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Scripts.Manager
 {
@@ -13,9 +14,15 @@ namespace Scripts.Manager
         [Range(1, 4)]
         private int playerInGame = 2;
         [SerializeField]
-        private int currentPlayerTurn = 0;
+        private int currentPlayerTurn;
         [SerializeField]
         private bool isHoled;
+        [SerializeField]
+        private int wonPlayer = -1;
+        [SerializeField]
+        private GameState gameState;
+
+        public static Action<int> OnGameWon;
 
         private void Awake()
         {
@@ -28,6 +35,8 @@ namespace Scripts.Manager
             {
                 Destroy(gameObject);
             }
+
+            ScoreManager.OnTotalScoreReached += SetWonPlayer;
         }
         
         public int GetCurrentPlayerTurn() => currentPlayerTurn;
@@ -44,6 +53,22 @@ namespace Scripts.Manager
                 return;
             }
             currentPlayerTurn = (++currentPlayerTurn) % playerInGame;
+        }
+
+        public int GetWonPlayer() => wonPlayer;
+
+        private void SetWonPlayer(int value)
+        {
+            wonPlayer = value; 
+            SetGameState(GameState.GameOver);
+            OnGameWon?.Invoke(wonPlayer);
+        }
+
+        public GameState GetGameState() => gameState;
+
+        private void SetGameState(GameState state)
+        {
+            gameState = state;
         }
     }
 }

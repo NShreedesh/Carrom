@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using Scripts.Enums;
 using Scripts.Extensions;
 using Scripts.InputControls;
 using Scripts.Interfaces;
@@ -68,6 +69,8 @@ namespace Scripts.Carom
 
         private void Update()
         {
+            if(GameManager.Instance.GetGameState() != GameState.Play) return;
+            
             ChangeStrikerWithSliderValue();
             ShootStriker();
             ResetStriker();

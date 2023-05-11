@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Scripts.Enums;
 using Scripts.Extensions;
 using Scripts.Interfaces;
 using Scripts.Manager;
@@ -84,23 +85,7 @@ namespace Scripts.Carom
 
         private void UpdateScore()
         {
-            switch (coinType)
-            {
-                case CoinType.White:
-                    scoreManager.SetScore(GameManager.Instance.GetCurrentPlayerTurn(), 20);
-                    break;
-                case CoinType.Black:
-                    scoreManager.SetScore(GameManager.Instance.GetCurrentPlayerTurn(), 10);
-                    break;
-                case CoinType.Red:
-                    scoreManager.SetScore(GameManager.Instance.GetCurrentPlayerTurn(), 40);
-                    break;
-                case CoinType.Striker:
-                    scoreManager.SetScore(GameManager.Instance.GetCurrentPlayerTurn(), -10);
-                    break;
-                default:
-                    break;
-            }
+            scoreManager.SetScore(GameManager.Instance.GetCurrentPlayerTurn(), scoreManager.GetCoinTypeScore(coinType));
         }
 
         public float GetVelocity()
@@ -111,14 +96,6 @@ namespace Scripts.Carom
         private void OnDisable()
         {
             StopAllCoroutines();
-        }
-        
-        private enum CoinType
-        {
-            White,
-            Black,
-            Red,
-            Striker,
         }
     }
 }
