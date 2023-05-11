@@ -219,9 +219,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4388828344565334bb6928d2a2cad041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreManager: {fileID: 0}
   spriteRenderer: {fileID: 15430884314347289}
   rb: {fileID: 4830177259820499952}
   collider: {fileID: 1069249607195401020}
+  coinType: 3
   holeEnterSpeed: 25
   coinInHoleScale: {x: 0.4, y: 0.4, z: 0.4}
   strikeHitClip: {fileID: 8300000, guid: 4461e913f7ed4e34a9e174d64ad154f4, type: 3}

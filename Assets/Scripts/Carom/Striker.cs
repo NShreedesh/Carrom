@@ -42,8 +42,7 @@ namespace Scripts.Carom
         private Vector2 endMousePosition;
         [SerializeField]
         private Vector2 power;
-
-
+        
         [Header("Slider")]
         [SerializeField]
         private CaromSlider[] caromSliders;

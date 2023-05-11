@@ -11,13 +11,19 @@ namespace Scripts.Carom
     {
         [Header("Components")]
         [SerializeField]
+        private ScoreManager scoreManager;
+        [SerializeField]
         private SpriteRenderer spriteRenderer;
-        
-        [Header("Coin")]
+
+        [Header("Physics")]
         [SerializeField]
         private Rigidbody2D rb;
         [SerializeField]
         private new Collider2D collider;
+
+        [Header("Coin")]
+        [SerializeField]
+        private CoinType coinType;
 
         [Header("Enter Hole")]
         [SerializeField]
@@ -40,7 +46,7 @@ namespace Scripts.Carom
         private void OnCollisionEnter2D(Collision2D other)
         {
             if(rb.velocity.magnitude < 0.1f) return;
-            if(!other.gameObject.TryGetComponent(out IHitEffect hitEffect))  return;
+            if(!other.gameObject.TryGetComponent(out IHitEffect _))  return;
             AudioManager.Instance.PlaySoundFx(strikeHitClip);
         }
 
@@ -50,6 +56,7 @@ namespace Scripts.Carom
             rb.bodyType = RigidbodyType2D.Static;
             rb.Sleep();
             StartCoroutine(TakeToHole(target));
+            UpdateScore();
         }
 
         private IEnumerator TakeToHole(Transform target)
@@ -64,11 +71,36 @@ namespace Scripts.Carom
                 rb.position = Vector3.MoveTowards(transform.position, target.position, Time.deltaTime * holeEnterSpeed);
                 yield return null;
             }
-            if(!striker) GameManager.Instance.SetIsHoled(true);
+
+            if (!striker)
+            {
+                GameManager.Instance.SetIsHoled(true);
+            }
             yield return new WaitForSeconds(1);
             striker?.SetCanResetStriker(true);
             yield return new WaitForSeconds(2);
             if (!striker) gameObject.SetActive(false);
+        }
+
+        private void UpdateScore()
+        {
+            switch (coinType)
+            {
+                case CoinType.White:
+                    scoreManager.SetScore(GameManager.Instance.GetCurrentPlayerTurn(), 20);
+                    break;
+                case CoinType.Black:
+                    scoreManager.SetScore(GameManager.Instance.GetCurrentPlayerTurn(), 10);
+                    break;
+                case CoinType.Red:
+                    scoreManager.SetScore(GameManager.Instance.GetCurrentPlayerTurn(), 40);
+                    break;
+                case CoinType.Striker:
+                    scoreManager.SetScore(GameManager.Instance.GetCurrentPlayerTurn(), -10);
+                    break;
+                default:
+                    break;
+            }
         }
 
         public float GetVelocity()
@@ -79,6 +111,14 @@ namespace Scripts.Carom
         private void OnDisable()
         {
             StopAllCoroutines();
+        }
+        
+        private enum CoinType
+        {
+            White,
+            Black,
+            Red,
+            Striker,
         }
     }
 }

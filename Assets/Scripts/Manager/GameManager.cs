@@ -32,6 +32,8 @@ namespace Scripts.Manager
         
         public int GetCurrentPlayerTurn() => currentPlayerTurn;
         
+        public int GetPlayerInGame() => playerInGame;
+        
         public bool SetIsHoled(bool value) => isHoled = value;
         
         public void SetCurrentPlayerTurn()
