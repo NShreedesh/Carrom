@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Scripts.Carom
+namespace Scripts.UI
 {
     public class CaromSlider : MonoBehaviour
     {
