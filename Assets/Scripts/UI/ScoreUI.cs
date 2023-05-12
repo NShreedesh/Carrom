@@ -25,8 +25,10 @@ namespace Scripts.UI
 
         private void SetScoreUI(int score)
         {
-            if(GameManager.Instance.GetCurrentPlayerTurn() == playerNumber)
+            if (GameManager.Instance.GetCurrentPlayerTurn() == playerNumber)
+            {
                 ChangeScoreUIText(score);
+            }
         }
 
         private void ChangeScoreUIText(int score)
@@ -38,7 +40,6 @@ namespace Scripts.UI
         private void OnDisable()
         {
             ScoreManager.OnScoreUISet -= SetScoreUI;
-            ScoreManager.OnScoreUISet -= ChangeScoreUIText;
         }
     }
 }

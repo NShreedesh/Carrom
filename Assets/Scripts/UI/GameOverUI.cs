@@ -3,7 +3,6 @@ using Scripts.Manager;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Scripts.UI
@@ -21,6 +20,12 @@ namespace Scripts.UI
         [Header("Button")]
         [SerializeField]
         private Button playButton;
+
+        [Header("Score UI Text")]
+        [SerializeField]
+        private TMP_Text playerScoreText;
+        [SerializeField]
+        private TMP_Text enemyScoreText;
 
         private void Awake()
         {
