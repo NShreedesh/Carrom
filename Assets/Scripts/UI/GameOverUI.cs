@@ -21,12 +21,6 @@ namespace Scripts.UI
         [SerializeField]
         private Button playButton;
 
-        [Header("Score UI Text")]
-        [SerializeField]
-        private TMP_Text playerScoreText;
-        [SerializeField]
-        private TMP_Text enemyScoreText;
-
         private void Awake()
         {
             gameOverPanel.SetActive(false);
@@ -47,11 +41,11 @@ namespace Scripts.UI
             switch (gameState)
             {
                 case GameState.Win:
-                    displayText.text = "Win";
+                    displayText.text = "You Win";
                     buttonText.text = "Play Again!";
                     break;
                 case GameState.Lose:
-                    displayText.text = "Lose";
+                    displayText.text = "You Lose";
                     buttonText.text = "Try Again!";
                     break;
                 case GameState.Pause:
