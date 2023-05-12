@@ -41,11 +41,11 @@ namespace Scripts.UI
             switch (gameState)
             {
                 case GameState.Win:
-                    displayText.text = "You Win";
+                    displayText.text = $"Player {GameManager.Instance.GetWonPlayer() + 1} Win";
                     buttonText.text = "Play Again!";
                     break;
                 case GameState.Lose:
-                    displayText.text = "You Lose";
+                    displayText.text = $"Player {GameManager.Instance.GetWonPlayer() + 1} Win";
                     buttonText.text = "Try Again!";
                     break;
                 case GameState.Pause:
