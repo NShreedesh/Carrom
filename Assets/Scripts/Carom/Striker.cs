@@ -69,11 +69,11 @@ namespace Scripts.Carom
 
         private void Update()
         {
-            if(GameManager.Instance.GetGameState() != GameState.Play) return;
+            ResetStriker();
             
+            if(GameManager.Instance.GetGameState() != GameState.Play) return;
             ChangeStrikerWithSliderValue();
             ShootStriker();
-            ResetStriker();
         }
 
         private void ChangeStrikerWithSliderValue()

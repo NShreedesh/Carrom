@@ -211,7 +211,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -100, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &108400438
 MonoBehaviour:
@@ -3594,6 +3594,7 @@ MonoBehaviour:
   gameOverPanel: {fileID: 919926383}
   displayText: {fileID: 1300309409}
   buttonText: {fileID: 1278612741}
+  playButton: {fileID: 1150265842}
 --- !u!1 &1167050586
 GameObject:
   m_ObjectHideFlags: 0

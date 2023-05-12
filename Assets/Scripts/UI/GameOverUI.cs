@@ -2,6 +2,9 @@
 using Scripts.Manager;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 namespace Scripts.UI
 {
@@ -15,10 +18,15 @@ namespace Scripts.UI
         [SerializeField]
         private TMP_Text buttonText;
 
+        [Header("Button")]
+        [SerializeField]
+        private Button playButton;
+
         private void Awake()
         {
             gameOverPanel.SetActive(false);
             GameManager.OnGameStateChanged += OnGameOverTriggered;
+            playButton.onClick.AddListener(OnPlayButtonClicked);
         }
 
         private void OnGameOverTriggered(GameState gameState)
@@ -48,9 +56,27 @@ namespace Scripts.UI
             }
         }
 
+        private void OnPlayButtonClicked()
+        {
+            switch (GameManager.Instance.GetGameState())
+            {
+                case GameState.Pause:
+                    GameManager.Instance.SetGameState(GameState.Play);
+                    gameOverPanel.SetActive(false);
+                    break;
+                case GameState.Win:
+                case GameState.Lose:
+                    GameManager.Instance.Reset();
+                    GameManager.Instance.SetGameState(GameState.Play);
+                    SceneManager.LoadScene(0);
+                    break;
+            }
+        }
+
         private void OnDisable()
         {
             GameManager.OnGameStateChanged -= OnGameOverTriggered;
+            playButton.onClick.RemoveAllListeners();
         }
     }
 }

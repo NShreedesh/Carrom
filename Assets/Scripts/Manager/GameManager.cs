@@ -1,6 +1,7 @@
 using System;
 using Scripts.Enums;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Scripts.Manager
 {
@@ -69,6 +70,13 @@ namespace Scripts.Manager
         {
             gameState = state;
             OnGameStateChanged?.Invoke(gameState);
+        }
+
+        public void Reset()
+        {
+            isHoled = false;
+            currentPlayerTurn = 0;
+            wonPlayer = -1;
         }
     }
 }
