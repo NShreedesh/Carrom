@@ -22,7 +22,7 @@ namespace Scripts.Manager
         [SerializeField]
         private GameState gameState;
 
-        public static Action<int> OnGameWon;
+        public static Action<GameState> OnGameStateChanged;
 
         private void Awake()
         {
@@ -61,14 +61,14 @@ namespace Scripts.Manager
         {
             wonPlayer = value;
             SetGameState(wonPlayer == 0 ? GameState.Win : GameState.Lose);
-            OnGameWon?.Invoke(wonPlayer);
         }
 
         public GameState GetGameState() => gameState;
 
-        private void SetGameState(GameState state)
+        public void SetGameState(GameState state)
         {
             gameState = state;
+            OnGameStateChanged?.Invoke(gameState);
         }
     }
 }

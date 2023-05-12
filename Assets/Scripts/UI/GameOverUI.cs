@@ -18,37 +18,39 @@ namespace Scripts.UI
         private void Awake()
         {
             gameOverPanel.SetActive(false);
-            GameManager.OnGameWon += OnGameOverTriggered;
+            GameManager.OnGameStateChanged += OnGameOverTriggered;
         }
 
-        private void OnGameOverTriggered(int wonPlayer)
+        private void OnGameOverTriggered(GameState gameState)
         {
+            if (gameState == GameState.Play) return;
+            
             gameOverPanel.SetActive(true);
-            ChangeUIText();
+            ChangeUIText(gameState);
         }
 
-        private void ChangeUIText()
+        private void ChangeUIText(GameState gameState)
         {
-            if (GameManager.Instance.GetGameState() == GameState.Win)
+            switch (gameState)
             {
-                displayText.text = "Win";
-                buttonText.text = "Play Again!";
-            }
-            else if(GameManager.Instance.GetGameState() == GameState.Lose)
-            {
-                displayText.text = "Lose";
-                buttonText.text = "Try Again!";
-            }
-            else if(GameManager.Instance.GetGameState() == GameState.Pause)
-            {
-                displayText.text = "Pause";
-                buttonText.text = "Play!";
+                case GameState.Win:
+                    displayText.text = "Win";
+                    buttonText.text = "Play Again!";
+                    break;
+                case GameState.Lose:
+                    displayText.text = "Lose";
+                    buttonText.text = "Try Again!";
+                    break;
+                case GameState.Pause:
+                    displayText.text = "Pause";
+                    buttonText.text = "Play!";
+                    break;
             }
         }
 
         private void OnDisable()
         {
-            GameManager.OnGameWon -= OnGameOverTriggered;
+            GameManager.OnGameStateChanged -= OnGameOverTriggered;
         }
     }
 }
