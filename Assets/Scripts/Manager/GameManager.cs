@@ -36,7 +36,7 @@ namespace Scripts.Manager
                 Destroy(gameObject);
             }
 
-            ScoreManager.OnTotalScoreReached += SetWonPlayer;
+            ScoreManager.OnTotalScoreReached += SetPlayerWinLoseState;
         }
         
         public int GetCurrentPlayerTurn() => currentPlayerTurn;
@@ -57,10 +57,10 @@ namespace Scripts.Manager
 
         public int GetWonPlayer() => wonPlayer;
 
-        private void SetWonPlayer(int value)
+        private void SetPlayerWinLoseState(int value)
         {
-            wonPlayer = value; 
-            SetGameState(GameState.GameOver);
+            wonPlayer = value;
+            SetGameState(wonPlayer == 0 ? GameState.Win : GameState.Lose);
             OnGameWon?.Invoke(wonPlayer);
         }
 

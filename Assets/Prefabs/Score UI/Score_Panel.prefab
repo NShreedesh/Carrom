@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9124784190976412999}
   - component: {fileID: 4660185062462579951}
+  - component: {fileID: 1661520455679789907}
   m_Layer: 5
   m_Name: Score_Panel
   m_TagString: Untagged
@@ -66,6 +67,21 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &1661520455679789907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177937954024090800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47f298eef328e8147a806f8618eddc49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreManager: {fileID: 0}
+  scoreText: {fileID: 6581266615089274148}
+  playerNumber: 0
 --- !u!1 &2459265338481046919
 GameObject:
   m_ObjectHideFlags: 0

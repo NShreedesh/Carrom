@@ -22,10 +22,10 @@ namespace Scripts.Manager
         [SerializeField]
         private int strikerCoinScore = -10;
 
-        public static Action<int, int> OnScoreUISet;
+        public static Action<int> OnScoreUISet;
         public static Action<int> OnTotalScoreReached;
         
-        private void Awake()
+        private void Start()
         {
             score = new int[GameManager.Instance.GetPlayerInGame()];
         }
@@ -53,10 +53,12 @@ namespace Scripts.Manager
             {
                 score[playerNumber] = updatedScore;
             }
-            OnScoreUISet?.Invoke(score[playerNumber], totalScoreToWin);
+            OnScoreUISet?.Invoke(score[playerNumber]);
 
             if (score[playerNumber] >= totalScoreToWin)
                 OnTotalScoreReached?.Invoke(playerNumber);
-        } 
+        }
+
+        public int GetTotalScore() => totalScoreToWin;
     }
 }
