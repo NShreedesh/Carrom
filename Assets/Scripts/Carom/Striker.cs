@@ -6,6 +6,7 @@ using Scripts.Interfaces;
 using Scripts.Manager;
 using Scripts.UI;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Scripts.Carom
 {
@@ -61,9 +62,10 @@ namespace Scripts.Carom
         [SerializeField]
         private Coin[] coins;
 
+        [FormerlySerializedAs("left")]
         [Header("Left")]
         [SerializeField]
-        private bool left;
+        private bool isMovingLeft;
         
         private void Start()
         {
@@ -88,27 +90,36 @@ namespace Scripts.Carom
              if (isDraggingStriker) return;
              CaromSlider caromSlider = caromSliders[GameManager.Instance.GetCurrentPlayerTurn()];
              if(caromSlider.GetIsSliderBeingUsed()) return;
+             if (isMovingLeft && transform.position.x <= caromSlider.GetSliderMinValue())
+             {
+                 isMovingLeft = false;
+             }
 
              Collider2D hitInfo = Physics2D.OverlapCircle(transform.position, spriteRenderer.bounds.extents.x, coinLayerMask);
              if (hitInfo is null) return;
              if (!hitInfo.TryGetComponent(out Coin coin)) return;
 
-             if (left && transform.position.x <= caromSlider.GetSliderMinValue())
+             switch (isMovingLeft)
              {
-                 float resetPosition = transform.position.x + coin.GetSpriteRenderer().localBounds.extents.x;
-                 caromSlider.SetSliderValue(resetPosition);
-                 left = false;
-             }
-             else if (!left)
-             {
-                 float resetPosition = transform.position.x + coin.GetSpriteRenderer().localBounds.extents.x;
-                 caromSlider.SetSliderValue(resetPosition);
+                 case true when transform.position.x <= caromSlider.GetSliderMinValue():
+                 {
+                     float resetPosition = transform.position.x + coin.GetSpriteRenderer().localBounds.extents.x;
+                     caromSlider.SetSliderValue(resetPosition);
+                     isMovingLeft = false;
+                     break;
+                 }
+                 case false:
+                 {
+                     float resetPosition = transform.position.x + coin.GetSpriteRenderer().localBounds.extents.x;
+                     caromSlider.SetSliderValue(resetPosition);
+                     break;
+                 }
              }
 
              if (caromSlider.GetSliderValue() >= caromSlider.GetSliderMaxValue())
              {
                  caromSlider.SetSliderValue(caromSlider.GetSliderMinValue());
-                 left = true;
+                 isMovingLeft = true;
              }
         }
 
@@ -181,7 +192,7 @@ namespace Scripts.Carom
             rb.bodyType = RigidbodyType2D.Dynamic;
             transform.localScale = strikerDefaultScale;
             isStrikerShot = false;
-            left = false;
+            isMovingLeft = false;
         }
 
         private void EnableDisableSlider()
