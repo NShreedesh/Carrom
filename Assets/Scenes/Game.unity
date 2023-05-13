@@ -6316,6 +6316,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 519420031}
     - target: {fileID: 6105534568271033278, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
+      propertyPath: strikerRadius
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6105534568271033278, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
       propertyPath: inputController
       value: 
       objectReference: {fileID: 1143759406}

@@ -20,7 +20,7 @@ namespace Scripts.Carom
         [SerializeField]
         private Rigidbody2D rb;
         [SerializeField]
-        private new Collider2D collider;
+        private new CircleCollider2D collider;
 
         [Header("Coin")]
         [SerializeField]
@@ -91,6 +91,8 @@ namespace Scripts.Carom
         public float GetVelocity() => rb.velocity.magnitude;
 
         public SpriteRenderer GetSpriteRenderer() => spriteRenderer;
+        
+        public CircleCollider2D GetCollider() => collider;
         
         private void OnDisable()
         {

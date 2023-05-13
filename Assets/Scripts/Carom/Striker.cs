@@ -61,8 +61,9 @@ namespace Scripts.Carom
         private bool canResetStriker;
         [SerializeField]
         private Coin[] coins;
+        [SerializeField]
+        private float strikerRadius = 0.2f;
 
-        [FormerlySerializedAs("left")]
         [Header("Left")]
         [SerializeField]
         private bool isMovingLeft;
@@ -95,7 +96,7 @@ namespace Scripts.Carom
                  isMovingLeft = false;
              }
 
-             Collider2D hitInfo = Physics2D.OverlapCircle(transform.position, spriteRenderer.bounds.extents.x, coinLayerMask);
+             Collider2D hitInfo = Physics2D.OverlapCircle(transform.position, strikerRadius, coinLayerMask);
              if (hitInfo is null) return;
              if (!hitInfo.TryGetComponent(out Coin coin)) return;
 
@@ -103,14 +104,14 @@ namespace Scripts.Carom
              {
                  case true when transform.position.x <= caromSlider.GetSliderMinValue():
                  {
-                     float resetPosition = transform.position.x + coin.GetSpriteRenderer().localBounds.extents.x;
+                     float resetPosition = transform.position.x + coin.GetCollider().bounds.extents.x;
                      caromSlider.SetSliderValue(resetPosition);
                      isMovingLeft = false;
                      break;
                  }
                  case false:
                  {
-                     float resetPosition = transform.position.x + coin.GetSpriteRenderer().localBounds.extents.x;
+                     float resetPosition = transform.position.x + coin.GetCollider().bounds.extents.x;
                      caromSlider.SetSliderValue(resetPosition);
                      break;
                  }
@@ -123,13 +124,6 @@ namespace Scripts.Carom
              }
         }
 
-#if UNITY_EDITOR
-        private void OnDrawGizmos()
-        {
-            Gizmos.DrawWireSphere(transform.position, spriteRenderer.bounds.extents.x);
-        }
-#endif
-        
         private void ChangeStrikerWithSliderValue()
         {
             if(isStrikerShot) return;
@@ -214,5 +208,14 @@ namespace Scripts.Carom
         public bool GetIsDragging() => isDraggingStriker;
 
         public bool SetCanResetStriker(bool value) => canResetStriker = value;
+
+        #region  Gizmos
+#if UNITY_EDITOR
+        private void OnDrawGizmos()
+        {
+            Gizmos.DrawWireSphere(transform.position, strikerRadius);
+        }
+#endif
+        #endregion
     }
 }
