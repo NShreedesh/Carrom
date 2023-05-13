@@ -35,6 +35,8 @@ namespace Scripts.Carom
         [Header("Audio")]
         [SerializeField]
         private AudioClip strikeHitClip;
+        [SerializeField]
+        private AudioClip inHoleClip;
 
         private void OnTriggerEnter2D(Collider2D other)
         {
@@ -58,6 +60,7 @@ namespace Scripts.Carom
             rb.Sleep();
             StartCoroutine(TakeToHole(target));
             UpdateScore();
+            AudioManager.Instance.PlaySoundFx(inHoleClip);
         }
 
         private IEnumerator TakeToHole(Transform target)

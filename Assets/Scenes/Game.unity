@@ -186,6 +186,7 @@ GameObject:
   - component: {fileID: 108400440}
   - component: {fileID: 108400439}
   - component: {fileID: 108400438}
+  - component: {fileID: 108400441}
   m_Layer: 5
   m_Name: Pause_Button
   m_TagString: Untagged
@@ -295,6 +296,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 108400436}
   m_CullTransparentMesh: 1
+--- !u!114 &108400441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108400436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc5f409b5774b28a16d26167b9eb38a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 108400438}
+  clickClip: {fileID: 8300000, guid: b1f5a4348680cbf4790d8dadc6e6b092, type: 3}
 --- !u!1 &170577388
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,6 +514,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 639534065}
     m_Modifications:
     - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
+      propertyPath: inHoleClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5cab008ff6ed2f24c916613e4f2e9ba4, type: 3}
+    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 1132695480}
@@ -568,6 +587,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 639534065}
     m_Modifications:
+    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
+      propertyPath: inHoleClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5cab008ff6ed2f24c916613e4f2e9ba4, type: 3}
     - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
       propertyPath: scoreManager
       value: 
@@ -836,6 +859,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 639534065}
     m_Modifications:
+    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
+      propertyPath: inHoleClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5cab008ff6ed2f24c916613e4f2e9ba4, type: 3}
     - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
       propertyPath: scoreManager
       value: 
@@ -1123,6 +1150,10 @@ PrefabInstance:
       value: Black_2
       objectReference: {fileID: 0}
     - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: inHoleClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5cab008ff6ed2f24c916613e4f2e9ba4, type: 3}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 1132695480}
@@ -1386,6 +1417,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 639534065}
     m_Modifications:
+    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
+      propertyPath: inHoleClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5cab008ff6ed2f24c916613e4f2e9ba4, type: 3}
     - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
       propertyPath: scoreManager
       value: 
@@ -1657,6 +1692,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 639534065}
     m_Modifications:
     - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
+      propertyPath: inHoleClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5cab008ff6ed2f24c916613e4f2e9ba4, type: 3}
+    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 1132695480}
@@ -1835,6 +1874,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 639534065}
     m_Modifications:
+    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
+      propertyPath: inHoleClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5cab008ff6ed2f24c916613e4f2e9ba4, type: 3}
     - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
       propertyPath: scoreManager
       value: 
@@ -2230,6 +2273,10 @@ PrefabInstance:
       value: Black_3
       objectReference: {fileID: 0}
     - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: inHoleClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5cab008ff6ed2f24c916613e4f2e9ba4, type: 3}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 1132695480}
@@ -2299,6 +2346,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Black
       objectReference: {fileID: 0}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: inHoleClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5cab008ff6ed2f24c916613e4f2e9ba4, type: 3}
     - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
       propertyPath: scoreManager
       value: 
@@ -3015,6 +3066,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 639534065}
     m_Modifications:
     - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
+      propertyPath: inHoleClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5cab008ff6ed2f24c916613e4f2e9ba4, type: 3}
+    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 1132695480}
@@ -3099,6 +3154,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Black_8
       objectReference: {fileID: 0}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: inHoleClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5cab008ff6ed2f24c916613e4f2e9ba4, type: 3}
     - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
       propertyPath: scoreManager
       value: 
@@ -3350,6 +3409,7 @@ GameObject:
   - component: {fileID: 1150265844}
   - component: {fileID: 1150265843}
   - component: {fileID: 1150265842}
+  - component: {fileID: 1150265845}
   m_Layer: 5
   m_Name: GameOver_Button
   m_TagString: Untagged
@@ -3460,6 +3520,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1150265840}
   m_CullTransparentMesh: 1
+--- !u!114 &1150265845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1150265840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc5f409b5774b28a16d26167b9eb38a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1150265842}
+  clickClip: {fileID: 8300000, guid: b1f5a4348680cbf4790d8dadc6e6b092, type: 3}
 --- !u!1 &1159264148
 GameObject:
   m_ObjectHideFlags: 0
@@ -3762,6 +3836,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Black_5
       objectReference: {fileID: 0}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: inHoleClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5cab008ff6ed2f24c916613e4f2e9ba4, type: 3}
     - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
       propertyPath: scoreManager
       value: 
@@ -4362,6 +4440,10 @@ PrefabInstance:
       value: Black_4
       objectReference: {fileID: 0}
     - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: inHoleClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5cab008ff6ed2f24c916613e4f2e9ba4, type: 3}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 1132695480}
@@ -4443,6 +4525,10 @@ PrefabInstance:
       value: Black_1
       objectReference: {fileID: 0}
     - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: inHoleClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5cab008ff6ed2f24c916613e4f2e9ba4, type: 3}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 1132695480}
@@ -4519,6 +4605,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 639534065}
     m_Modifications:
+    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
+      propertyPath: inHoleClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5cab008ff6ed2f24c916613e4f2e9ba4, type: 3}
     - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
       propertyPath: scoreManager
       value: 
@@ -4794,6 +4884,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 639534065}
     m_Modifications:
     - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
+      propertyPath: inHoleClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5cab008ff6ed2f24c916613e4f2e9ba4, type: 3}
+    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 1132695480}
@@ -4878,6 +4972,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Black_7
       objectReference: {fileID: 0}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: inHoleClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5cab008ff6ed2f24c916613e4f2e9ba4, type: 3}
     - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
       propertyPath: scoreManager
       value: 
@@ -4970,6 +5068,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Black_6
       objectReference: {fileID: 0}
+    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
+      propertyPath: inHoleClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5cab008ff6ed2f24c916613e4f2e9ba4, type: 3}
     - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
       propertyPath: scoreManager
       value: 
@@ -5747,6 +5849,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 639534065}
     m_Modifications:
     - target: {fileID: 58756301762401222, guid: fb11763d44689804baf6edf7e3b325c5, type: 3}
+      propertyPath: inHoleClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5cab008ff6ed2f24c916613e4f2e9ba4, type: 3}
+    - target: {fileID: 58756301762401222, guid: fb11763d44689804baf6edf7e3b325c5, type: 3}
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 1132695480}
@@ -6153,6 +6259,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 798554209}
     m_Modifications:
+    - target: {fileID: 60024141050668041, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
+      propertyPath: inHoleClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5cab008ff6ed2f24c916613e4f2e9ba4, type: 3}
     - target: {fileID: 60024141050668041, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
       propertyPath: scoreManager
       value: 

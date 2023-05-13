@@ -168,4 +168,4 @@ MonoBehaviour:
   coinType: 2
   holeEnterSpeed: 25
   coinInHoleScale: {x: 0.7, y: 0.7, z: 0.7}
-  strikeHitClip: {fileID: 8300000, guid: 4461e913f7ed4e34a9e174d64ad154f4, type: 3}
+  strikeHitClip: {fileID: 8300000, guid: 15000b73b274ccb488ae41bb093f3da9, type: 3}

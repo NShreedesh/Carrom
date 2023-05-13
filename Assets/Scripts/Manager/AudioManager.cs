@@ -26,7 +26,6 @@ namespace Scripts.Manager
 
         public void PlaySoundFx(AudioClip clip, float volume = 1)
         {
-            if (soundFXAudioSource.isPlaying) return;
             soundFXAudioSource.PlayOneShot(clip, volume);
         }
     }

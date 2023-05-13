@@ -75,7 +75,7 @@ namespace Scripts.UI
         private void OnDisable()
         {
             GameManager.OnGameStateChanged -= OnGameOverTriggered;
-            playButton.onClick.RemoveAllListeners();
+            playButton.onClick.RemoveListener(OnPlayButtonClicked);
         }
     }
 }
