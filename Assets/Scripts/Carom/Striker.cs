@@ -53,12 +53,18 @@ namespace Scripts.Carom
 
         [Header("Reset Striker")]
         [SerializeField]
+        private LayerMask coinLayerMask;
+        [SerializeField]
         private Vector3[] playerStrikerPositions;
         [SerializeField]
         private bool canResetStriker;
         [SerializeField]
         private Coin[] coins;
 
+        [Header("Left")]
+        [SerializeField]
+        private bool left;
+        
         private void Start()
         {
             EnableDisableSlider();
@@ -74,8 +80,45 @@ namespace Scripts.Carom
             if(GameManager.Instance.GetGameState() != GameState.Play) return;
             ChangeStrikerWithSliderValue();
             ShootStriker();
+            CheckIfStrikerCollidedWithCoin();
         }
 
+        private void CheckIfStrikerCollidedWithCoin()
+        {
+             if (isDraggingStriker) return;
+             CaromSlider caromSlider = caromSliders[GameManager.Instance.GetCurrentPlayerTurn()];
+             if(caromSlider.GetIsSliderBeingUsed()) return;
+
+             Collider2D hitInfo = Physics2D.OverlapCircle(transform.position, spriteRenderer.bounds.extents.x, coinLayerMask);
+             if (hitInfo is null) return;
+             if (!hitInfo.TryGetComponent(out Coin coin)) return;
+
+             if (left && transform.position.x <= caromSlider.GetSliderMinValue())
+             {
+                 float resetPosition = transform.position.x + coin.GetSpriteRenderer().localBounds.extents.x;
+                 caromSlider.SetSliderValue(resetPosition);
+                 left = false;
+             }
+             else if (!left)
+             {
+                 float resetPosition = transform.position.x + coin.GetSpriteRenderer().localBounds.extents.x;
+                 caromSlider.SetSliderValue(resetPosition);
+             }
+
+             if (caromSlider.GetSliderValue() >= caromSlider.GetSliderMaxValue())
+             {
+                 caromSlider.SetSliderValue(caromSlider.GetSliderMinValue());
+                 left = true;
+             }
+        }
+
+#if UNITY_EDITOR
+        private void OnDrawGizmos()
+        {
+            Gizmos.DrawWireSphere(transform.position, spriteRenderer.bounds.extents.x);
+        }
+#endif
+        
         private void ChangeStrikerWithSliderValue()
         {
             if(isStrikerShot) return;
@@ -138,6 +181,7 @@ namespace Scripts.Carom
             rb.bodyType = RigidbodyType2D.Dynamic;
             transform.localScale = strikerDefaultScale;
             isStrikerShot = false;
+            left = false;
         }
 
         private void EnableDisableSlider()
