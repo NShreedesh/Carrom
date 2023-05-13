@@ -6260,10 +6260,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 798554209}
     m_Modifications:
     - target: {fileID: 60024141050668041, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
-      propertyPath: inHoleClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 5cab008ff6ed2f24c916613e4f2e9ba4, type: 3}
-    - target: {fileID: 60024141050668041, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 1132695480}
@@ -6363,10 +6359,6 @@ PrefabInstance:
       propertyPath: coins.Array.data[9]
       value: 
       objectReference: {fileID: 1651715298}
-    - target: {fileID: 6105534568271033278, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
-      propertyPath: coinLayerMask.m_Bits
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 6105534568271033278, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
       propertyPath: coins.Array.data[10]
       value: 

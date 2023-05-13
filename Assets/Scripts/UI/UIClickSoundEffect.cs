@@ -1,5 +1,4 @@
-﻿using System;
-using Scripts.Manager;
+﻿using Scripts.Manager;
 using UnityEngine;
 using UnityEngine.UI;
 

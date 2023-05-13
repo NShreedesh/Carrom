@@ -48,9 +48,10 @@ namespace Scripts.Carom
 
         private void OnCollisionEnter2D(Collision2D other)
         {
-            if(rb.velocity.magnitude < 0.1f) return;
+            if(GetVelocity() < 0.1f) return;
             if(!other.gameObject.TryGetComponent(out IHitEffect _))  return;
-            AudioManager.Instance.PlaySoundFx(strikeHitClip);
+            float volume = Mathf.Clamp(GetVelocity() / 25, 0, 1);
+            AudioManager.Instance.PlaySoundFx(strikeHitClip, volume);
         }
 
         private void MakeInHole(Transform target)

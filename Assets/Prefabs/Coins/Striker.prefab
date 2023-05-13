@@ -185,7 +185,7 @@ MonoBehaviour:
   caromSliderSpeed: 20
   coinLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   playerStrikerPositions:
   - {x: 0, y: -2.22, z: 0}
   - {x: 0, y: 1.26, z: 0}
@@ -231,6 +231,7 @@ MonoBehaviour:
   holeEnterSpeed: 25
   coinInHoleScale: {x: 0.4, y: 0.4, z: 0.4}
   strikeHitClip: {fileID: 8300000, guid: 15000b73b274ccb488ae41bb093f3da9, type: 3}
+  inHoleClip: {fileID: 8300000, guid: 5cab008ff6ed2f24c916613e4f2e9ba4, type: 3}
 --- !u!1 &4737949686774559053
 GameObject:
   m_ObjectHideFlags: 0
