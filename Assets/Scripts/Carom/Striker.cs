@@ -45,6 +45,8 @@ namespace Scripts.Carom
         private Vector2 endMousePosition;
         [SerializeField]
         private Vector2 power;
+        [SerializeField]
+        private float powerThreshold = 1f;
         
         [Header("Slider")]
         [SerializeField]
@@ -159,12 +161,19 @@ namespace Scripts.Carom
             }
             else if (isDraggingStriker && !inputController.GetMousePress().WasPressedThisFrame())
             {
-                rb.AddForce(-power * shootForce, ForceMode2D.Impulse);
-                caromSliders[GameManager.Instance.GetCurrentPlayerTurn()].DisableSlider();
-                isDraggingStriker = false;
-                isStrikerShot = true;
-                canResetStriker = true;
-                collider.isTrigger = false;
+                if(power.magnitude > powerThreshold)
+                {
+                    rb.AddForce(-power * shootForce, ForceMode2D.Impulse);
+                    caromSliders[GameManager.Instance.GetCurrentPlayerTurn()].DisableSlider();
+                    isDraggingStriker = false;
+                    isStrikerShot = true;
+                    canResetStriker = true;
+                    collider.isTrigger = false;
+                }
+                else
+                {
+                    isDraggingStriker = false;
+                }
             }
         }
 

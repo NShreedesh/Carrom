@@ -6342,6 +6342,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Striker
       objectReference: {fileID: 0}
+    - target: {fileID: 5341417304951329674, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6105534568271033278, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
       propertyPath: camera
       value: 
