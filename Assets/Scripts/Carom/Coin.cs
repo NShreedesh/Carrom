@@ -88,7 +88,7 @@ namespace Scripts.Carom
             scoreManager.SetScore(GameManager.Instance.GetCurrentPlayerTurn(), scoreManager.GetCoinTypeScore(coinType));
         }
 
-        public float GetVelocity() => rb.velocity.magnitude;
+        public float GetVelocity() => rb.linearVelocity.magnitude;
 
         public SpriteRenderer GetSpriteRenderer() => spriteRenderer;
         

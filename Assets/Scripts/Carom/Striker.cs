@@ -170,7 +170,7 @@ namespace Scripts.Carom
 
         private void ResetStriker()
         {
-            if (rb.velocity.magnitude > 0.02f) return;
+            if (rb.linearVelocity.magnitude > 0.02f) return;
             if(!canResetStriker) return;
 
             if (coins.Any(coin => coin.GetVelocity() > 0)) return;
