@@ -20,7 +20,7 @@ namespace Scripts.Carom
         [SerializeField]
         private Rigidbody2D rb;
         [SerializeField]
-        private new CircleCollider2D collider;
+        private CircleCollider2D collider;
 
         [Header("Coin")]
         [SerializeField]

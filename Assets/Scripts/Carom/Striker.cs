@@ -16,13 +16,13 @@ namespace Scripts.Carom
         [SerializeField]
         private InputController inputController;
         [SerializeField]
-        private new CircleCollider2D collider;
+        private CircleCollider2D collider;
         [SerializeField]
         private SpriteRenderer spriteRenderer;
         
         [Header(("Raycast"))]
         [SerializeField]
-        private new Camera camera;
+        private Camera camera;
         [SerializeField]
         private LayerMask strikerLayerMask;
 
