@@ -21,7 +21,8 @@ namespace Scripts.Manager
         [SerializeField]
         private GameState gameState;
         [SerializeField]
-        private PlayerType playerType;
+        private PlayerType[] playerType;
+        private PlayerType _currentPlayerType;
 
         public static Action<GameState> OnGameStateChanged;
 
@@ -49,6 +50,7 @@ namespace Scripts.Manager
                 return;
             }
             currentPlayerTurn = (++currentPlayerTurn) % playerInGame;
+            _currentPlayerType = playerType[currentPlayerTurn];
         }
 
         public int GetWonPlayer() => wonPlayer;

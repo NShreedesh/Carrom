@@ -3588,7 +3588,7 @@ MonoBehaviour:
   isHoled: 0
   wonPlayer: -1
   gameState: 0
-  playerType: 0
+  playerType: 00000000010000000100000001000000
 --- !u!1 &1160720930
 GameObject:
   m_ObjectHideFlags: 0
