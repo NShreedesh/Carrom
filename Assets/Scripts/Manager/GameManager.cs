@@ -20,6 +20,8 @@ namespace Scripts.Manager
         private int wonPlayer = -1;
         [SerializeField]
         private GameState gameState;
+        [SerializeField]
+        private PlayerType playerType;
 
         public static Action<GameState> OnGameStateChanged;
 
