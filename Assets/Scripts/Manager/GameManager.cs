@@ -1,15 +1,13 @@
 using System;
+using Helpers;
 using Scripts.Enums;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Scripts.Manager
 {
-    public class GameManager : MonoBehaviour
+    public class GameManager : Singleton<GameManager>
     {
-        [field: Header("Instance")]
-        public static GameManager Instance { get; private set; }
-
         [Header("Values")]
         [SerializeField]
         [Range(1, 4)]
@@ -25,21 +23,16 @@ namespace Scripts.Manager
 
         public static Action<GameState> OnGameStateChanged;
 
-        private void Awake()
+        private void OnEnable()
         {
-            if (Instance == null)
-            {
-                Instance = this;
-                DontDestroyOnLoad(gameObject);
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
-
             ScoreManager.OnTotalScoreReached += SetPlayerWinLoseState;
         }
-        
+
+        private void OnDisable()
+        {
+            ScoreManager.OnTotalScoreReached -= SetPlayerWinLoseState;
+        }
+
         public int GetCurrentPlayerTurn() => currentPlayerTurn;
         
         public int GetPlayerInGame() => playerInGame;
