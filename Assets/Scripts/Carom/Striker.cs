@@ -1,12 +1,14 @@
-﻿using System;
-using System.Linq;
-using Scripts.Enums;
+﻿using Scripts.Enums;
 using Scripts.Extensions;
 using Scripts.InputControls;
 using Scripts.Interfaces;
 using Scripts.Manager;
 using Scripts.UI;
+using System;
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.Serialization;
 
 namespace Scripts.Carom
@@ -149,6 +151,8 @@ namespace Scripts.Carom
         {
             for (int i = 0; i < _botStrikeData.Length; i++)
             {
+                if (!coins[i].gameObject.activeSelf) continue;
+
                 _botStrikeData[i] = new();
                 for (int j = 0; j <= 1; j++)
                 {
@@ -163,17 +167,40 @@ namespace Scripts.Carom
                     _botStrikeData[i].direction[j] = direction;
                     _botStrikeData[i].impactPoints[j] = impactPoint;
 
-                    RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, distanceVector.magnitude, coinLayerMask);
-                    if(hit.collider != null)
+                    Vector2 previousPosition = piecePos;
+
+                    for (float d = 0; d <= distanceVector.magnitude; d += 0.1602883f)
                     {
-                        Debug.Log($"{selectedCoin.gameObject} => {hit.collider.gameObject}", selectedCoin.gameObject);
+                        Vector2 pos = previousPosition + direction * d;
+                        Collider2D[] results = Physics2D.OverlapCircleAll(pos, 0.1602883f, coinLayerMask);
+                        if (results.Length == 0) _botStrikeData[i].point += 1;
+
+                        foreach (Collider2D c in results)
+                        {
+                            if (c.gameObject == selectedCoin.gameObject) continue; 
+                            _botStrikeData[i].point -= 1;
+                        }
+                    }
+
+                    previousPosition = transform.position;
+                    distanceVector = impactPoint - new Vector2(transform.position.x, transform.position.y);
+                    direction = distanceVector.normalized;
+                    for (float d = 0; d <= distanceVector.magnitude; d += strikerRadius)
+                    {
+                        Vector2 pos = previousPosition + direction * d;
+                        Collider2D[] results = Physics2D.OverlapCircleAll(pos, 0.1602883f, coinLayerMask);
+                        if (results.Length == 0) _botStrikeData[i].point += 1;
+
+                        foreach (Collider2D c in results)
+                        {
+                            if (c.gameObject == selectedCoin.gameObject) continue;
+                            _botStrikeData[i].point -= 1;
+                        }
                     }
                 }
             }
 
-            // TODO: Striker checks for every shot - can it take the shot - gives the points
-
-            // TODO: The more points wins and striker takes the shot from there
+            // TODO: striker takes the shot from there with calculated power
         }
 
         private void ShootStriker()
