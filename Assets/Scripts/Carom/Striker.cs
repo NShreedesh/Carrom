@@ -82,6 +82,13 @@ namespace Scripts.Carom
         private void Start()
         {
             _botStrikeData = new BotStrikeData[coins.Length];
+            for (int i = 0; i < _botStrikeData.Length; i++)
+            {
+                _botStrikeData[i] = new()
+                {
+                    point = -10000
+                };
+            }
 
             EnableDisableSlider();
 
@@ -161,9 +168,16 @@ namespace Scripts.Carom
 
             for (int i = 0; i < _botStrikeData.Length; i++)
             {
+                _botStrikeData[i] = new()
+                {
+                    point = -10000
+                };
+            }
+
+            for (int i = 0; i < _botStrikeData.Length; i++)
+            {
                 if (!coins[i].gameObject.activeSelf) continue;
 
-                _botStrikeData[i] = new();
                 for (int j = 0; j <= 1; j++)
                 {
                     Coin selectedCoin = coins[i];
@@ -210,17 +224,16 @@ namespace Scripts.Carom
                 }
             }
 
-            // TODO: striker with more points takes the shot from there with calculated power
             BotStrikeData botStrikeData = _botStrikeData.OrderByDescending(data => data.point).FirstOrDefault();
             if (botStrikeData != null)
             {
-                Debug.Log(botStrikeData);
                 Vector2 direction = botStrikeData.impactPoints[0] - new Vector2(transform.position.x, transform.position.y);
                 direction.Normalize();
-                Launch(new Vector2(0,1));
+                Launch(direction);
                 isStrikerShot = true;
                 canResetStriker = true;
                 collider.isTrigger = false;
+                botStrikeData.point = -10000;
             }
         }
 
