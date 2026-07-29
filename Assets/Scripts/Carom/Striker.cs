@@ -20,7 +20,7 @@ namespace Scripts.Carom
         private CircleCollider2D collider;
         [SerializeField]
         private SpriteRenderer spriteRenderer;
-        
+
         [Header(("Raycast"))]
         [SerializeField]
         private Camera camera;
@@ -48,7 +48,7 @@ namespace Scripts.Carom
         private Vector2 power;
         [SerializeField]
         private float powerThreshold = 1f;
-        
+
         [Header("Slider")]
         [SerializeField]
         private CaromSlider[] caromSliders;
@@ -75,13 +75,13 @@ namespace Scripts.Carom
         [Header("Left")]
         [SerializeField]
         private bool isMovingLeft;
-        
+
         private void Start()
         {
             _botStrikeData = new BotStrikeData[coins.Length];
 
             EnableDisableSlider();
-            
+
             strikerDefaultScale = transform.localScale;
             collider.isTrigger = true;
         }
@@ -89,8 +89,8 @@ namespace Scripts.Carom
         private void Update()
         {
             ResetStriker();
-            
-            if(GameManager.Instance.GetGameState() != GameState.Play) return;
+
+            if (GameManager.Instance.GetGameState() != GameState.Play) return;
             ChangeStrikerWithSliderValue();
             ShootStriker();
             CheckIfStrikerCollidedWithCoin();
@@ -98,46 +98,46 @@ namespace Scripts.Carom
 
         private void CheckIfStrikerCollidedWithCoin()
         {
-             if (isDraggingStriker) return;
-             CaromSlider caromSlider = caromSliders[GameManager.Instance.GetCurrentPlayerTurn()];
-             if(caromSlider.GetIsSliderBeingUsed()) return;
-             if (isMovingLeft && transform.position.x <= caromSlider.GetSliderMinValue())
-             {
-                 isMovingLeft = false;
-             }
+            if (isDraggingStriker) return;
+            CaromSlider caromSlider = caromSliders[GameManager.Instance.GetCurrentPlayerTurn()];
+            if (caromSlider.GetIsSliderBeingUsed()) return;
+            if (isMovingLeft && transform.position.x <= caromSlider.GetSliderMinValue())
+            {
+                isMovingLeft = false;
+            }
 
-             Collider2D hitInfo = Physics2D.OverlapCircle(transform.position, strikerRadius, coinLayerMask);
-             if (hitInfo is null) return;
-             if (!hitInfo.TryGetComponent(out Coin coin)) return;
+            Collider2D hitInfo = Physics2D.OverlapCircle(transform.position, strikerRadius, coinLayerMask);
+            if (hitInfo is null) return;
+            if (!hitInfo.TryGetComponent(out Coin coin)) return;
 
-             switch (isMovingLeft)
-             {
-                 case true when transform.position.x <= caromSlider.GetSliderMinValue():
-                 {
-                     float resetPosition = transform.position.x + coin.GetCollider().bounds.extents.x;
-                     caromSlider.SetSliderValue(resetPosition);
-                     isMovingLeft = false;
-                     break;
-                 }
-                 case false:
-                 {
-                     float resetPosition = transform.position.x + coin.GetCollider().bounds.extents.x;
-                     caromSlider.SetSliderValue(resetPosition);
-                     break;
-                 }
-             }
+            switch (isMovingLeft)
+            {
+                case true when transform.position.x <= caromSlider.GetSliderMinValue():
+                    {
+                        float resetPosition = transform.position.x + coin.GetCollider().bounds.extents.x;
+                        caromSlider.SetSliderValue(resetPosition);
+                        isMovingLeft = false;
+                        break;
+                    }
+                case false:
+                    {
+                        float resetPosition = transform.position.x + coin.GetCollider().bounds.extents.x;
+                        caromSlider.SetSliderValue(resetPosition);
+                        break;
+                    }
+            }
 
-             if (caromSlider.GetSliderValue() >= caromSlider.GetSliderMaxValue())
-             {
-                 caromSlider.SetSliderValue(caromSlider.GetSliderMinValue());
-                 isMovingLeft = true;
-             }
+            if (caromSlider.GetSliderValue() >= caromSlider.GetSliderMaxValue())
+            {
+                caromSlider.SetSliderValue(caromSlider.GetSliderMinValue());
+                isMovingLeft = true;
+            }
         }
 
         private void ChangeStrikerWithSliderValue()
         {
-            if(isStrikerShot) return;
-            
+            if (isStrikerShot) return;
+
             float strikerTargetPosition = caromSliders[GameManager.Instance.GetCurrentPlayerTurn()].GetSliderValue();
             Vector3 strikerCurrentPosition = transform.localPosition;
             strikerCurrentPosition.x = Mathf.MoveTowards(strikerCurrentPosition.x, strikerTargetPosition, caromSliderSpeed * Time.deltaTime);
@@ -147,19 +147,27 @@ namespace Scripts.Carom
         [ContextMenu("Bot Strike")]
         private void TryBotStrike()
         {
-            for (int i = 0; i < coins.Length; i++)
+            for (int i = 0; i < _botStrikeData.Length; i++)
             {
+                _botStrikeData[i] = new();
                 for (int j = 0; j <= 1; j++)
                 {
                     Coin selectedCoin = coins[i];
                     Vector2 pocketPos = pockets[j].position;
                     Vector2 piecePos = selectedCoin.transform.position;
 
-                    Vector2 direction = (pocketPos - piecePos).normalized;
+                    Vector2 distanceVector = pocketPos - piecePos;
+                    Vector2 direction = distanceVector.normalized;
                     Vector2 impactPoint = piecePos - (direction * (strikerRadius + 0.1602883f));
 
                     _botStrikeData[i].direction[j] = direction;
                     _botStrikeData[i].impactPoints[j] = impactPoint;
+
+                    RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, distanceVector.magnitude, coinLayerMask);
+                    if(hit.collider != null)
+                    {
+                        Debug.Log($"{selectedCoin.gameObject} => {hit.collider.gameObject}", selectedCoin.gameObject);
+                    }
                 }
             }
 
@@ -170,8 +178,8 @@ namespace Scripts.Carom
 
         private void ShootStriker()
         {
-            if(isStrikerShot) return;
-            
+            if (isStrikerShot) return;
+
             Vector3 worldMousePosition = camera.ScreenToWorldPoint(inputController.GetMousePosition());
             RaycastHit2D hitInfo = Physics2D.Raycast(worldMousePosition,
                 Vector3.forward,
@@ -193,7 +201,7 @@ namespace Scripts.Carom
             }
             else if (isDraggingStriker && !inputController.GetMousePress().WasPressedThisFrame())
             {
-                if(power.magnitude > powerThreshold)
+                if (power.magnitude > powerThreshold)
                 {
                     rb.AddForce(-power * shootForce, ForceMode2D.Impulse);
                     caromSliders[GameManager.Instance.GetCurrentPlayerTurn()].DisableSlider();
@@ -212,7 +220,7 @@ namespace Scripts.Carom
         private void ResetStriker()
         {
             if (rb.linearVelocity.magnitude > 0.02f) return;
-            if(!canResetStriker) return;
+            if (!canResetStriker) return;
 
             if (coins.Any(coin => coin.GetVelocity() > 0)) return;
 
@@ -243,7 +251,7 @@ namespace Scripts.Carom
         {
             transform.localPosition = playerStrikerPositions[GameManager.Instance.GetCurrentPlayerTurn()];
         }
-        
+
         public Vector2 GetPower() => power;
 
         public bool GetIsDragging() => isDraggingStriker;
