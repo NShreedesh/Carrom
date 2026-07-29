@@ -155,9 +155,10 @@ namespace Scripts.Carom
                     Vector2 pocketPos = pockets[j].position;
                     Vector2 piecePos = selectedCoin.transform.position;
 
-                    Vector2 pieceToPocket = (pocketPos - piecePos).normalized;
-                    Vector2 impactPoint = piecePos - (pieceToPocket * (strikerRadius + 0.1602883f));
+                    Vector2 direction = (pocketPos - piecePos).normalized;
+                    Vector2 impactPoint = piecePos - (direction * (strikerRadius + 0.1602883f));
 
+                    _botStrikeData[i].direction[j] = direction;
                     _botStrikeData[i].impactPoints[j] = impactPoint;
                 }
             }
@@ -256,14 +257,17 @@ namespace Scripts.Carom
             Gizmos.DrawWireSphere(transform.position, strikerRadius);
 
             if (_botStrikeData == null) return;
-            Gizmos.color = Color.red;
             for (int i = 0; i < _botStrikeData.Length; i++)
             {
                 if (_botStrikeData[i] != null && _botStrikeData[i].impactPoints != null)
                 {
-                    foreach(Vector2 point in _botStrikeData[i].impactPoints)
+                    for (int j = 0; j < _botStrikeData[i].impactPoints.Length; j++)
                     {
-                        Gizmos.DrawWireSphere(point, strikerRadius);
+                        Vector2 point = _botStrikeData[i].impactPoints[j];
+                        Gizmos.color = Color.red;
+                        Gizmos.DrawWireSphere(point, .05f);
+                        Gizmos.color = Color.green;
+                        Gizmos.DrawLine(point, point + _botStrikeData[i].direction[j]);
                     }
                 }
             }
@@ -277,6 +281,7 @@ namespace Scripts.Carom
     public class BotStrikeData
     {
         public Vector2[] impactPoints = new Vector2[2];
+        public Vector2[] direction = new Vector2[2];
         public int point = -1;
     }
 }
