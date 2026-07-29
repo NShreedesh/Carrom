@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using Scripts.Enums;
 using Scripts.Extensions;
 using Scripts.InputControls;
@@ -64,7 +65,12 @@ namespace Scripts.Carom
         [SerializeField]
         private Coin[] coins;
         [SerializeField]
+        private Transform[] pockets;
+        [SerializeField]
         private float strikerRadius = 0.2f;
+
+        [Header("Bot Strike")]
+        private BotStrikeData[] _botStrikeData;
 
         [Header("Left")]
         [SerializeField]
@@ -72,6 +78,8 @@ namespace Scripts.Carom
         
         private void Start()
         {
+            _botStrikeData = new BotStrikeData[coins.Length];
+
             EnableDisableSlider();
             
             strikerDefaultScale = transform.localScale;
@@ -135,7 +143,30 @@ namespace Scripts.Carom
             strikerCurrentPosition.x = Mathf.MoveTowards(strikerCurrentPosition.x, strikerTargetPosition, caromSliderSpeed * Time.deltaTime);
             transform.localPosition = strikerCurrentPosition;
         }
-        
+
+        [ContextMenu("Bot Strike")]
+        private void TryBotStrike()
+        {
+            for (int i = 0; i < coins.Length; i++)
+            {
+                for (int j = 0; j <= 1; j++)
+                {
+                    Coin selectedCoin = coins[i];
+                    Vector2 pocketPos = pockets[j].position;
+                    Vector2 piecePos = selectedCoin.transform.position;
+
+                    Vector2 pieceToPocket = (pocketPos - piecePos).normalized;
+                    Vector2 impactPoint = piecePos - (pieceToPocket * (strikerRadius + 0.1602883f));
+
+                    _botStrikeData[i].impactPoints[j] = impactPoint;
+                }
+            }
+
+            // TODO: Striker checks for every shot - can it take the shot - gives the points
+
+            // TODO: The more points wins and striker takes the shot from there
+        }
+
         private void ShootStriker()
         {
             if(isStrikerShot) return;
@@ -223,8 +254,29 @@ namespace Scripts.Carom
         private void OnDrawGizmos()
         {
             Gizmos.DrawWireSphere(transform.position, strikerRadius);
+
+            if (_botStrikeData == null) return;
+            Gizmos.color = Color.red;
+            for (int i = 0; i < _botStrikeData.Length; i++)
+            {
+                if (_botStrikeData[i] != null && _botStrikeData[i].impactPoints != null)
+                {
+                    foreach(Vector2 point in _botStrikeData[i].impactPoints)
+                    {
+                        Gizmos.DrawWireSphere(point, strikerRadius);
+                    }
+                }
+            }
+
         }
 #endif
         #endregion
+    }
+
+    [Serializable]
+    public class BotStrikeData
+    {
+        public Vector2[] impactPoints = new Vector2[2];
+        public int point = -1;
     }
 }

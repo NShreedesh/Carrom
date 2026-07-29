@@ -48,8 +48,8 @@ namespace Scripts.Carom
 
         private void OnCollisionEnter2D(Collision2D other)
         {
-            if(GetVelocity() < 0.1f) return;
-            if(!other.gameObject.TryGetComponent(out IHitEffect _))  return;
+            if (GetVelocity() < 0.1f) return;
+            if (!other.gameObject.TryGetComponent(out IHitEffect _)) return;
             float volume = Mathf.Clamp(GetVelocity() / 25, 0, 1);
             AudioManager.Instance.PlaySoundFx(strikeHitClip, volume);
         }
@@ -68,7 +68,7 @@ namespace Scripts.Carom
         {
             TryGetComponent(out Striker striker);
             striker?.SetCanResetStriker(false);
-            
+
             spriteRenderer.ChangeAlpha(0.5f);
             transform.localScale = coinInHoleScale;
             while (Math.Abs(transform.position.x - target.position.x) != 0)
@@ -91,9 +91,9 @@ namespace Scripts.Carom
         public float GetVelocity() => rb.linearVelocity.magnitude;
 
         public SpriteRenderer GetSpriteRenderer() => spriteRenderer;
-        
+
         public CircleCollider2D GetCollider() => collider;
-        
+
         private void OnDisable()
         {
             StopAllCoroutines();
