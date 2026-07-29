@@ -10,6 +10,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Serialization;
+using UnityEngine.WSA;
 
 namespace Scripts.Carom
 {
@@ -94,7 +95,14 @@ namespace Scripts.Carom
 
             if (GameManager.Instance.GetGameState() != GameState.Play) return;
             ChangeStrikerWithSliderValue();
-            ShootStriker();
+            if(GameManager.Instance.GetPlayerType() == PlayerType.Bot)
+            {
+                TryBotStrike();
+            }
+            else
+            {
+                ShootStriker();
+            }
             CheckIfStrikerCollidedWithCoin();
         }
 
@@ -149,6 +157,8 @@ namespace Scripts.Carom
         [ContextMenu("Bot Strike")]
         private void TryBotStrike()
         {
+            if (isStrikerShot) return;
+
             for (int i = 0; i < _botStrikeData.Length; i++)
             {
                 if (!coins[i].gameObject.activeSelf) continue;
@@ -200,7 +210,18 @@ namespace Scripts.Carom
                 }
             }
 
-            // TODO: striker takes the shot from there with calculated power
+            // TODO: striker with more points takes the shot from there with calculated power
+            BotStrikeData botStrikeData = _botStrikeData.OrderByDescending(data => data.point).FirstOrDefault();
+            if (botStrikeData != null)
+            {
+                Debug.Log(botStrikeData);
+                Vector2 direction = botStrikeData.impactPoints[0] - new Vector2(transform.position.x, transform.position.y);
+                direction.Normalize();
+                Launch(new Vector2(0,1));
+                isStrikerShot = true;
+                canResetStriker = true;
+                collider.isTrigger = false;
+            }
         }
 
         private void ShootStriker()
@@ -230,7 +251,7 @@ namespace Scripts.Carom
             {
                 if (power.magnitude > powerThreshold)
                 {
-                    rb.AddForce(-power * shootForce, ForceMode2D.Impulse);
+                    Launch(-power);
                     caromSliders[GameManager.Instance.GetCurrentPlayerTurn()].DisableSlider();
                     isDraggingStriker = false;
                     isStrikerShot = true;
@@ -242,6 +263,11 @@ namespace Scripts.Carom
                     isDraggingStriker = false;
                 }
             }
+        }
+
+        private void Launch(Vector2 power)
+        {
+            rb.AddForce(power * shootForce, ForceMode2D.Impulse);
         }
 
         private void ResetStriker()

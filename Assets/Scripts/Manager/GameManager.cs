@@ -37,6 +37,8 @@ namespace Scripts.Manager
         }
 
         public int GetCurrentPlayerTurn() => currentPlayerTurn;
+
+        public PlayerType GetPlayerType() => _currentPlayerType;
         
         public int GetPlayerInGame() => playerInGame;
         
