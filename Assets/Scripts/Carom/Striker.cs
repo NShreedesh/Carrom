@@ -176,7 +176,7 @@ namespace Scripts.Carom
 
             for (int i = 0; i < _botStrikeData.Length; i++)
             {
-                if (!coins[i].gameObject.activeSelf) continue;
+                if (coins[i].IsHoled) continue;
 
                 for (int j = 0; j <= 1; j++)
                 {

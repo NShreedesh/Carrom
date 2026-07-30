@@ -31,6 +31,7 @@ namespace Scripts.Carom
         private float holeEnterSpeed = 10;
         [SerializeField]
         private Vector3 coinInHoleScale;
+        public bool IsHoled { get; private set; }
 
         [Header("Audio")]
         [SerializeField]
@@ -69,6 +70,7 @@ namespace Scripts.Carom
             TryGetComponent(out Striker striker);
             striker?.SetCanResetStriker(false);
 
+            IsHoled = true;
             spriteRenderer.ChangeAlpha(0.5f);
             transform.localScale = coinInHoleScale;
             while (Math.Abs(transform.position.x - target.position.x) != 0)
