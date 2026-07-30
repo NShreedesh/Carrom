@@ -4349,6 +4349,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1300309407}
   m_CullTransparentMesh: 1
+--- !u!114 &1432556457 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6264790995969608479, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
+  m_PrefabInstance: {fileID: 7049129920828302013}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891df518f82c444593dd605de7e11001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1529133637
 GameObject:
   m_ObjectHideFlags: 0
@@ -5487,6 +5498,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2038077919}
   m_CullTransparentMesh: 1
+--- !u!114 &2051568970 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2732395777964877160, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
+  m_PrefabInstance: {fileID: 7049129920828302013}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d285ea1b281c43a8b00b3adc6ac9e671, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2059394753
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6402,6 +6424,14 @@ PrefabInstance:
       propertyPath: 'coins.Array.data[9]'
       value: 
       objectReference: {fileID: 1651715298}
+    - target: {fileID: 6105534568271033278, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
+      propertyPath: strikerArrowDisplay
+      value: 
+      objectReference: {fileID: 2051568970}
+    - target: {fileID: 6105534568271033278, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
+      propertyPath: strikerPowerDisplay
+      value: 
+      objectReference: {fileID: 1432556457}
     - target: {fileID: 6105534568271033278, guid: 7f6ef5dc8e5dab5419bb8bbf32750ed9, type: 3}
       propertyPath: 'coins.Array.data[10]'
       value: 

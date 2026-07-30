@@ -23,6 +23,10 @@ namespace Scripts.Carom
         private CircleCollider2D collider;
         [SerializeField]
         private SpriteRenderer spriteRenderer;
+        [SerializeField]
+        private StrikerPowerDisplay strikerPowerDisplay;
+        [SerializeField]
+        private StrikerArrowDisplay strikerArrowDisplay;
 
         [Header(("Raycast"))]
         [SerializeField]
@@ -161,15 +165,18 @@ namespace Scripts.Carom
             transform.localPosition = strikerCurrentPosition;
         }
 
-        [ContextMenu("Bot Strike")]
-        private void TryBotStrike()
+        private async void TryBotStrike()
         {
             if (isStrikerShot) return;
+            isStrikerShot = true;
 
+            int pocketToUse = 2;
             for (int i = 0; i < _botStrikeData.Length; i++)
             {
                 _botStrikeData[i] = new()
                 {
+                    direction = new Vector2[pocketToUse],
+                    impactPoints = new Vector2[pocketToUse],
                     point = -10000
                 };
             }
@@ -178,7 +185,7 @@ namespace Scripts.Carom
             {
                 if (coins[i].IsHoled) continue;
 
-                for (int j = 0; j <= 1; j++)
+                for (int j = 0; j < pocketToUse; j++)
                 {
                     Coin selectedCoin = coins[i];
                     Vector2 pocketPos = pockets[j].position;
@@ -229,8 +236,10 @@ namespace Scripts.Carom
             {
                 Vector2 direction = botStrikeData.impactPoints[0] - new Vector2(transform.position.x, transform.position.y);
                 direction.Normalize();
+
+                await Awaitable.WaitForSecondsAsync(1f, destroyCancellationToken);
+
                 Launch(direction);
-                isStrikerShot = true;
                 canResetStriker = true;
                 collider.isTrigger = false;
                 botStrikeData.point = -10000;
@@ -259,11 +268,19 @@ namespace Scripts.Carom
                 power.x = Mathf.Clamp(power.x, -1, 1);
                 power.y = Mathf.Clamp(power.y, -1, 1);
                 endMousePosition = worldMousePosition;
+                if (isDraggingStriker)
+                {
+                    strikerPowerDisplay.SetStrikerPowerDisplay(power);
+                    strikerArrowDisplay.UpdateStrikerArrowDisplay(power);
+                }
             }
             else if (isDraggingStriker && !inputController.GetMousePress().WasPressedThisFrame())
             {
                 if (power.magnitude > powerThreshold)
                 {
+                    strikerPowerDisplay.Reset();
+                    strikerArrowDisplay.Reset();
+
                     Launch(-power);
                     caromSliders[GameManager.Instance.GetCurrentPlayerTurn()].DisableSlider();
                     isDraggingStriker = false;
