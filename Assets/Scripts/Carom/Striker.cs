@@ -231,15 +231,36 @@ namespace Scripts.Carom
                 }
             }
 
+            await Awaitable.WaitForSecondsAsync(1f, destroyCancellationToken);
             BotStrikeData botStrikeData = _botStrikeData.OrderByDescending(data => data.point).FirstOrDefault();
             if (botStrikeData != null)
             {
                 Vector2 direction = botStrikeData.impactPoints[0] - new Vector2(transform.position.x, transform.position.y);
                 direction.Normalize();
 
+                float time = 0;
+                float duration = 1f;
+                Vector2 currentDirection = Vector2.zero;
+                while(time < duration)
+                {
+                    time += Time.deltaTime;
+                    currentDirection = Vector2.Lerp(currentDirection, direction, time / duration);
+                    strikerPowerDisplay.SetStrikerPowerDisplay(-currentDirection);
+                    strikerArrowDisplay.UpdateStrikerArrowDisplay(-currentDirection);
+                    await Awaitable.EndOfFrameAsync();
+                }
+
+                currentDirection = direction;
+                strikerPowerDisplay.SetStrikerPowerDisplay(-currentDirection);
+                strikerArrowDisplay.UpdateStrikerArrowDisplay(-currentDirection);
+
                 await Awaitable.WaitForSecondsAsync(1f, destroyCancellationToken);
 
                 Launch(direction);
+
+                strikerPowerDisplay.Reset();
+                strikerArrowDisplay.Reset();
+
                 canResetStriker = true;
                 collider.isTrigger = false;
                 botStrikeData.point = -10000;
@@ -295,9 +316,9 @@ namespace Scripts.Carom
             }
         }
 
-        private void Launch(Vector2 power)
+        private void Launch(Vector2 direction)
         {
-            rb.AddForce(power * shootForce, ForceMode2D.Impulse);
+            rb.AddForce(direction * shootForce, ForceMode2D.Impulse);
         }
 
         private void ResetStriker()
