@@ -98,7 +98,7 @@ namespace Scripts.Carom
             collider.isTrigger = true;
         }
 
-        private void Update()
+        private async void Update()
         {
             ResetStriker();
 
@@ -106,7 +106,13 @@ namespace Scripts.Carom
             ChangeStrikerWithSliderValue();
             if (GameManager.Instance.GetPlayerType() == PlayerType.Bot)
             {
-                TryBotStrike();
+                try
+                {
+                    await TryBotStrike();
+                }
+                catch (Exception)
+                {
+                }
             }
             else
             {
@@ -163,7 +169,7 @@ namespace Scripts.Carom
             transform.localPosition = strikerCurrentPosition;
         }
 
-        private async void TryBotStrike()
+        private async Awaitable TryBotStrike()
         {
             if (isStrikerShot) return;
             isStrikerShot = true;
