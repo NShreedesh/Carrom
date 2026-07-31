@@ -178,6 +178,10 @@ namespace Scripts.Carom
                     impactPoints = new Vector2[pocketToUse],
                     points = new int[pocketToUse]
                 };
+                for (int j = 0; j < _botStrikeData[i].points.Length; j++)
+                {
+                    _botStrikeData[i].points[j] = int.MinValue;
+                }
             }
 
             for (int i = 0; i < _botStrikeData.Length; i++)
@@ -195,7 +199,8 @@ namespace Scripts.Carom
                     Vector2 impactPoint = piecePos - (direction * (strikerRadius + 0.1602883f));
 
                     _botStrikeData[i].direction[j] = direction;
-                    _botStrikeData[i].impactPoints[j] = impactPoint;
+                    _botStrikeData[i].impactPoints[j] = impactPoint; 
+                    _botStrikeData[i].points[j] = 0;
 
                     Vector2 previousPosition = piecePos;
 
@@ -203,7 +208,6 @@ namespace Scripts.Carom
                     {
                         Vector2 pos = previousPosition + direction * d;
                         Collider2D[] results = Physics2D.OverlapCircleAll(pos, 0.1602883f, coinLayerMask);
-                        if (results.Length == 0) _botStrikeData[i].points[j] += 1;
 
                         foreach (Collider2D c in results)
                         {
@@ -219,7 +223,6 @@ namespace Scripts.Carom
                     {
                         Vector2 pos = previousPosition + direction * d;
                         Collider2D[] results = Physics2D.OverlapCircleAll(pos, 0.1602883f, coinLayerMask);
-                        if (results.Length == 0) _botStrikeData[i].points[j] += 1;
 
                         foreach (Collider2D c in results)
                         {
@@ -257,12 +260,13 @@ namespace Scripts.Carom
                 direction.Normalize();
 
                 float time = 0;
-                float duration = 1f;
+                float duration = 0.3f;
+                Vector2 startDirection = Vector2.zero;
                 Vector2 currentDirection = Vector2.zero;
                 while (time < duration)
                 {
                     time += Time.deltaTime;
-                    currentDirection = Vector2.Lerp(currentDirection, direction, time / duration);
+                    currentDirection = Vector2.Lerp(startDirection, direction, time / duration);
                     strikerPowerDisplay.SetStrikerPowerDisplay(-currentDirection);
                     strikerArrowDisplay.UpdateStrikerArrowDisplay(-currentDirection);
                     await Awaitable.EndOfFrameAsync();
