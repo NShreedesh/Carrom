@@ -31,6 +31,7 @@ namespace Scripts.Carom
         private float holeEnterSpeed = 10;
         [SerializeField]
         private Vector3 coinInHoleScale;
+        [field: SerializeField]
         public bool IsHoled { get; private set; }
 
         [Header("Audio")]

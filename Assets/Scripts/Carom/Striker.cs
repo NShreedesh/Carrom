@@ -7,6 +7,7 @@ using Scripts.UI;
 using System;
 using System.Linq;
 using Unity.VisualScripting;
+using UnityEditor.U2D.Aseprite;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Serialization;
@@ -88,10 +89,7 @@ namespace Scripts.Carom
             _botStrikeData = new BotStrikeData[coins.Length];
             for (int i = 0; i < _botStrikeData.Length; i++)
             {
-                _botStrikeData[i] = new()
-                {
-                    point = -10000
-                };
+                _botStrikeData[i] = new();
             }
 
             EnableDisableSlider();
@@ -106,7 +104,7 @@ namespace Scripts.Carom
 
             if (GameManager.Instance.GetGameState() != GameState.Play) return;
             ChangeStrikerWithSliderValue();
-            if(GameManager.Instance.GetPlayerType() == PlayerType.Bot)
+            if (GameManager.Instance.GetPlayerType() == PlayerType.Bot)
             {
                 TryBotStrike();
             }
@@ -171,13 +169,14 @@ namespace Scripts.Carom
             isStrikerShot = true;
 
             int pocketToUse = 2;
+
             for (int i = 0; i < _botStrikeData.Length; i++)
             {
                 _botStrikeData[i] = new()
                 {
                     direction = new Vector2[pocketToUse],
                     impactPoints = new Vector2[pocketToUse],
-                    point = -10000
+                    points = new int[pocketToUse]
                 };
             }
 
@@ -204,12 +203,12 @@ namespace Scripts.Carom
                     {
                         Vector2 pos = previousPosition + direction * d;
                         Collider2D[] results = Physics2D.OverlapCircleAll(pos, 0.1602883f, coinLayerMask);
-                        if (results.Length == 0) _botStrikeData[i].point += 1;
+                        if (results.Length == 0) _botStrikeData[i].points[j] += 1;
 
                         foreach (Collider2D c in results)
                         {
-                            if (c.gameObject == selectedCoin.gameObject) continue; 
-                            _botStrikeData[i].point -= 1;
+                            if (c.gameObject == selectedCoin.gameObject) continue;
+                            _botStrikeData[i].points[j] -= 1;
                         }
                     }
 
@@ -220,28 +219,47 @@ namespace Scripts.Carom
                     {
                         Vector2 pos = previousPosition + direction * d;
                         Collider2D[] results = Physics2D.OverlapCircleAll(pos, 0.1602883f, coinLayerMask);
-                        if (results.Length == 0) _botStrikeData[i].point += 1;
+                        if (results.Length == 0) _botStrikeData[i].points[j] += 1;
 
                         foreach (Collider2D c in results)
                         {
                             if (c.gameObject == selectedCoin.gameObject) continue;
-                            _botStrikeData[i].point -= 1;
+                            _botStrikeData[i].points[j] -= 1;
                         }
                     }
                 }
             }
 
             await Awaitable.WaitForSecondsAsync(1f, destroyCancellationToken);
-            BotStrikeData botStrikeData = _botStrikeData.OrderByDescending(data => data.point).FirstOrDefault();
+
+            BotStrikeData botStrikeData = null;
+            int maxPointIndex = -1;
+            int maxPointValue = int.MinValue;
+
+            for (int i = 0; i < _botStrikeData.Length; i++)
+            {
+                BotStrikeData data = _botStrikeData[i];
+
+                for (int j = 0; j < data.points.Length; j++)
+                {
+                    if (data.points[j] > maxPointValue)
+                    {
+                        maxPointValue = data.points[j];
+                        botStrikeData = data;
+                        maxPointIndex = j;
+                    }
+                }
+            }
+
             if (botStrikeData != null)
             {
-                Vector2 direction = botStrikeData.impactPoints[0] - new Vector2(transform.position.x, transform.position.y);
+                Vector2 direction = botStrikeData.impactPoints[maxPointIndex] - new Vector2(transform.position.x, transform.position.y);
                 direction.Normalize();
 
                 float time = 0;
                 float duration = 1f;
                 Vector2 currentDirection = Vector2.zero;
-                while(time < duration)
+                while (time < duration)
                 {
                     time += Time.deltaTime;
                     currentDirection = Vector2.Lerp(currentDirection, direction, time / duration);
@@ -263,7 +281,6 @@ namespace Scripts.Carom
 
                 canResetStriker = true;
                 collider.isTrigger = false;
-                botStrikeData.point = -10000;
             }
         }
 
@@ -394,6 +411,6 @@ namespace Scripts.Carom
     {
         public Vector2[] impactPoints = new Vector2[2];
         public Vector2[] direction = new Vector2[2];
-        public int point = -1;
+        public int[] points = new int[2];
     }
 }
