@@ -78,7 +78,12 @@ namespace Scripts.Carom
         private float strikerRadius = 0.2f;
 
         [Header("Bot Strike")]
+        [SerializeField]
+        private BotStrikeData botStrikeDataResult;
+        [SerializeField]
+        private bool shouldShowAllBotStrikeData;
         private BotStrikeData[] _botStrikeData;
+        private int _maxPointIndex;
 
         [Header("Left")]
         [SerializeField]
@@ -241,8 +246,8 @@ namespace Scripts.Carom
 
             await Awaitable.WaitForSecondsAsync(1f, destroyCancellationToken);
 
-            BotStrikeData botStrikeData = null;
-            int maxPointIndex = -1;
+            botStrikeDataResult = null;
+            _maxPointIndex = -1;
             int maxPointValue = int.MinValue;
 
             for (int i = 0; i < _botStrikeData.Length; i++)
@@ -254,15 +259,15 @@ namespace Scripts.Carom
                     if (data.points[j] > maxPointValue)
                     {
                         maxPointValue = data.points[j];
-                        botStrikeData = data;
-                        maxPointIndex = j;
+                        botStrikeDataResult = data;
+                        _maxPointIndex = j;
                     }
                 }
             }
 
-            if (botStrikeData != null)
+            if (botStrikeDataResult != null)
             {
-                Vector2 direction = botStrikeData.impactPoints[maxPointIndex] - new Vector2(transform.position.x, transform.position.y);
+                Vector2 direction = botStrikeDataResult.impactPoints[_maxPointIndex] - new Vector2(transform.position.x, transform.position.y);
                 direction.Normalize();
 
                 float time = 0;
@@ -395,22 +400,32 @@ namespace Scripts.Carom
         {
             Gizmos.DrawWireSphere(transform.position, strikerRadius);
 
-            if (_botStrikeData == null) return;
-            for (int i = 0; i < _botStrikeData.Length; i++)
+            if (shouldShowAllBotStrikeData)
             {
-                if (_botStrikeData[i] != null && _botStrikeData[i].impactPoints != null)
+                if (_botStrikeData == null) return;
+                for (int i = 0; i < _botStrikeData.Length; i++)
                 {
-                    for (int j = 0; j < _botStrikeData[i].impactPoints.Length; j++)
+                    if (_botStrikeData[i] != null && _botStrikeData[i].impactPoints != null)
                     {
-                        Vector2 point = _botStrikeData[i].impactPoints[j];
-                        Gizmos.color = Color.red;
-                        Gizmos.DrawWireSphere(point, .05f);
-                        Gizmos.color = Color.green;
-                        Gizmos.DrawLine(point, point + _botStrikeData[i].direction[j]);
+                        for (int j = 0; j < _botStrikeData[i].impactPoints.Length; j++)
+                        {
+                            Vector2 point = _botStrikeData[i].impactPoints[j];
+                            Gizmos.color = Color.red;
+                            Gizmos.DrawWireSphere(point, .05f);
+                            Gizmos.color = Color.green;
+                            Gizmos.DrawLine(point, point + _botStrikeData[i].direction[j]);
+                        }
                     }
                 }
             }
 
+            for (int i = 0; i < botStrikeDataResult.impactPoints.Length; i++)
+            {
+                Vector2 point = botStrikeDataResult.impactPoints[i];
+                Gizmos.color = i == _maxPointIndex ? Color.green : Color.red;
+                Gizmos.DrawWireSphere(point, .05f);
+                Gizmos.DrawLine(point, point + botStrikeDataResult.direction[i]);
+            }
         }
 #endif
         #endregion
