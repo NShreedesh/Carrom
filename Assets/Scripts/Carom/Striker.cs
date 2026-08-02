@@ -343,6 +343,9 @@ namespace Scripts.Carom
                 }
                 else
                 {
+                    strikerPowerDisplay.Reset();
+                    strikerArrowDisplay.Reset();
+
                     isDraggingStriker = false;
                 }
             }
