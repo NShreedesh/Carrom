@@ -683,18 +683,6 @@ PrefabInstance:
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 1132695480}
-    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
-      propertyPath: coinInHoleScale.x
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
-      propertyPath: coinInHoleScale.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
-      propertyPath: coinInHoleScale.z
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 2468355035868792453, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -793,18 +781,6 @@ PrefabInstance:
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 1132695480}
-    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
-      propertyPath: coinInHoleScale.x
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
-      propertyPath: coinInHoleScale.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
-      propertyPath: coinInHoleScale.z
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 2468355035868792453, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1423,18 +1399,6 @@ PrefabInstance:
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 1132695480}
-    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
-      propertyPath: coinInHoleScale.x
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
-      propertyPath: coinInHoleScale.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
-      propertyPath: coinInHoleScale.z
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 2468355035868792453, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1753,18 +1717,6 @@ PrefabInstance:
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 1132695480}
-    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
-      propertyPath: coinInHoleScale.x
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
-      propertyPath: coinInHoleScale.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
-      propertyPath: coinInHoleScale.z
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 4779065229334459191, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1975,7 +1927,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 572788047}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -2061,18 +2013,6 @@ PrefabInstance:
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 1132695480}
-    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
-      propertyPath: coinInHoleScale.x
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
-      propertyPath: coinInHoleScale.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
-      propertyPath: coinInHoleScale.z
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 2468355035868792453, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2462,18 +2402,6 @@ PrefabInstance:
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 1132695480}
-    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
-      propertyPath: coinInHoleScale.x
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
-      propertyPath: coinInHoleScale.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
-      propertyPath: coinInHoleScale.z
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 2468355035868792453, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2680,18 +2608,6 @@ PrefabInstance:
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 1132695480}
-    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
-      propertyPath: coinInHoleScale.x
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
-      propertyPath: coinInHoleScale.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
-      propertyPath: coinInHoleScale.z
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 2468355035868792453, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -3155,18 +3071,6 @@ PrefabInstance:
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 1132695480}
-    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
-      propertyPath: coinInHoleScale.x
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
-      propertyPath: coinInHoleScale.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
-      propertyPath: coinInHoleScale.z
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 4779065229334459191, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -3265,18 +3169,6 @@ PrefabInstance:
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 1132695480}
-    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
-      propertyPath: coinInHoleScale.x
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
-      propertyPath: coinInHoleScale.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
-      propertyPath: coinInHoleScale.z
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 4779065229334459191, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -4229,18 +4121,6 @@ PrefabInstance:
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 1132695480}
-    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
-      propertyPath: coinInHoleScale.x
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
-      propertyPath: coinInHoleScale.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
-      propertyPath: coinInHoleScale.z
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 2468355035868792453, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -4358,18 +4238,6 @@ PrefabInstance:
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 1132695480}
-    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
-      propertyPath: coinInHoleScale.x
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
-      propertyPath: coinInHoleScale.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
-      propertyPath: coinInHoleScale.z
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 4779065229334459191, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -5078,18 +4946,6 @@ PrefabInstance:
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 1132695480}
-    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
-      propertyPath: coinInHoleScale.x
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
-      propertyPath: coinInHoleScale.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
-      propertyPath: coinInHoleScale.z
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 4779065229334459191, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -5960,18 +5816,6 @@ PrefabInstance:
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 1132695480}
-    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
-      propertyPath: coinInHoleScale.x
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
-      propertyPath: coinInHoleScale.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
-      propertyPath: coinInHoleScale.z
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 4779065229334459191, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -6081,18 +5925,6 @@ PrefabInstance:
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 1132695480}
-    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
-      propertyPath: coinInHoleScale.x
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
-      propertyPath: coinInHoleScale.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
-      propertyPath: coinInHoleScale.z
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 4779065229334459191, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -6306,18 +6138,6 @@ PrefabInstance:
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 1132695480}
-    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
-      propertyPath: coinInHoleScale.x
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
-      propertyPath: coinInHoleScale.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
-      propertyPath: coinInHoleScale.z
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 2468355035868792453, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -6696,18 +6516,6 @@ PrefabInstance:
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 1132695480}
-    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
-      propertyPath: coinInHoleScale.x
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
-      propertyPath: coinInHoleScale.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1557727773948358732, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
-      propertyPath: coinInHoleScale.z
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 2468355035868792453, guid: c779ce0f50357d244b02445a9dada46e, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -6825,18 +6633,6 @@ PrefabInstance:
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 1132695480}
-    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
-      propertyPath: coinInHoleScale.x
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
-      propertyPath: coinInHoleScale.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
-      propertyPath: coinInHoleScale.z
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 4779065229334459191, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -6957,18 +6753,6 @@ PrefabInstance:
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 1132695480}
-    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
-      propertyPath: coinInHoleScale.x
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
-      propertyPath: coinInHoleScale.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3677345799519182513, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
-      propertyPath: coinInHoleScale.z
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 4779065229334459191, guid: 54ffb76506b6b5e42800e21fe539db36, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -8018,18 +7802,6 @@ PrefabInstance:
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 1132695480}
-    - target: {fileID: 58756301762401222, guid: fb11763d44689804baf6edf7e3b325c5, type: 3}
-      propertyPath: coinInHoleScale.x
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 58756301762401222, guid: fb11763d44689804baf6edf7e3b325c5, type: 3}
-      propertyPath: coinInHoleScale.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 58756301762401222, guid: fb11763d44689804baf6edf7e3b325c5, type: 3}
-      propertyPath: coinInHoleScale.z
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 3091616273470811482, guid: fb11763d44689804baf6edf7e3b325c5, type: 3}
       propertyPath: m_Sprite
       value: 

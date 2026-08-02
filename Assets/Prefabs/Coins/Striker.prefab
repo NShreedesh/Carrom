@@ -176,6 +176,8 @@ MonoBehaviour:
   inputController: {fileID: 0}
   collider: {fileID: 1069249607195401020}
   spriteRenderer: {fileID: 15430884314347289}
+  strikerPowerDisplay: {fileID: 0}
+  strikerArrowDisplay: {fileID: 0}
   camera: {fileID: 0}
   strikerLayerMask:
     serializedVersion: 2
@@ -220,7 +222,17 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  pockets: []
   strikerRadius: 0.2
+  botStrikeDataResult:
+    impactPoints:
+    - {x: 0, y: 0}
+    - {x: 0, y: 0}
+    direction:
+    - {x: 0, y: 0}
+    - {x: 0, y: 0}
+    points: 0000000000000000
+  shouldShowAllBotStrikeData: 0
   isMovingLeft: 0
 --- !u!114 &60024141050668041
 MonoBehaviour:
@@ -239,8 +251,9 @@ MonoBehaviour:
   rb: {fileID: 4830177259820499952}
   collider: {fileID: 1069249607195401020}
   coinType: 3
-  holeEnterSpeed: 25
+  holeEnterDuration: 0.3
   coinInHoleScale: {x: 0.4, y: 0.4, z: 0.4}
+  <IsHoled>k__BackingField: 0
   strikeHitClip: {fileID: 8300000, guid: 15000b73b274ccb488ae41bb093f3da9, type: 3}
   inHoleClip: {fileID: 8300000, guid: 5cab008ff6ed2f24c916613e4f2e9ba4, type: 3}
 --- !u!1 &4737949686774559053
@@ -416,7 +429,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d285ea1b281c43a8b00b3adc6ac9e671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  striker: {fileID: 6105534568271033278}
   lineRenderer: {fileID: 7516582906535908490}
   scaleUpTo: 1
 --- !u!1 &5341417304951329674
@@ -524,5 +536,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 891df518f82c444593dd605de7e11001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  striker: {fileID: 6105534568271033278}
   scaleUpTo: 3.4

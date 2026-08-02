@@ -28,7 +28,7 @@ namespace Scripts.Carom
 
         [Header("Enter Hole")]
         [SerializeField]
-        private float holeEnterSpeed = 10;
+        private float holeEnterDuration = 0.3f;
         [SerializeField]
         private Vector3 coinInHoleScale;
         [field: SerializeField]
@@ -74,9 +74,12 @@ namespace Scripts.Carom
             IsHoled = true;
             spriteRenderer.ChangeAlpha(0.5f);
             transform.localScale = coinInHoleScale;
-            while (Math.Abs(transform.position.x - target.position.x) != 0)
+
+            float time = 0;
+            while (time < holeEnterDuration)
             {
-                rb.position = Vector3.MoveTowards(transform.position, target.position, Time.deltaTime * holeEnterSpeed);
+                time += Time.deltaTime;
+                rb.position = Vector3.Lerp(transform.position, target.position, time / holeEnterDuration);
                 yield return null;
             }
             GameManager.Instance.SetIsHoled(!striker);
