@@ -72,14 +72,16 @@ namespace Scripts.Carom
             striker?.SetCanResetStriker(false);
 
             IsHoled = true;
-            spriteRenderer.ChangeAlpha(0.5f);
-            transform.localScale = coinInHoleScale;
+            //spriteRenderer.ChangeAlpha(0.5f);
 
+            Vector3 startPosition = transform.position;
+            Vector3 startScale = transform.localScale;
             float time = 0;
             while (time < holeEnterDuration)
             {
                 time += Time.deltaTime;
-                rb.position = Vector3.Lerp(transform.position, target.position, time / holeEnterDuration);
+                rb.position = Vector3.Lerp(startPosition, target.position, time / (holeEnterDuration - 0.2f));
+                transform.localScale = Vector3.Lerp(startScale, coinInHoleScale, time / holeEnterDuration);
                 yield return null;
             }
             GameManager.Instance.SetIsHoled(!striker);
