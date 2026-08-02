@@ -1,0 +1,552 @@
+fileFormatVersion: 2
+guid: 80698ce4e5fe7da4c8d4c5a4daff19d6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4887257535218698406
+    second: carrom_gameplay_asset_0
+  - first:
+      213: 5539441336284037933
+    second: carrom_gameplay_asset_1
+  - first:
+      213: 447614496934107750
+    second: carrom_gameplay_asset_2
+  - first:
+      213: -6821072170193444326
+    second: carrom_gameplay_asset_3
+  - first:
+      213: -4634984874400595278
+    second: carrom_gameplay_asset_4
+  - first:
+      213: -3520055986005099405
+    second: carrom_gameplay_asset_5
+  - first:
+      213: 6373264453532794270
+    second: carrom_gameplay_asset_6
+  - first:
+      213: -8242173664592535137
+    second: carrom_gameplay_asset_7
+  - first:
+      213: -6325950316774559280
+    second: carrom_gameplay_asset_8
+  - first:
+      213: -4744992845632926300
+    second: carrom_gameplay_asset_9
+  - first:
+      213: -1521253489495856902
+    second: carrom_gameplay_asset_10
+  - first:
+      213: -756580194018130385
+    second: carrom_gameplay_asset_11
+  - first:
+      213: 2698614903551561847
+    second: carrom_gameplay_asset_12
+  - first:
+      213: -8144591589462318168
+    second: carrom_gameplay_asset_13
+  - first:
+      213: 8523293972733258795
+    second: carrom_gameplay_asset_14
+  - first:
+      213: 773791720486912486
+    second: carrom_gameplay_asset_15
+  - first:
+      213: -5459458663489784065
+    second: carrom_gameplay_asset_16
+  - first:
+      213: 1601904714181684922
+    second: carrom_gameplay_asset_17
+  - first:
+      213: -107093010569610738
+    second: carrom_gameplay_asset_18
+  - first:
+      213: 968306847982384309
+    second: carrom_gameplay_asset_19
+  - first:
+      213: -2790483441146071956
+    second: carrom_gameplay_asset_20
+  - first:
+      213: 7401305568333892241
+    second: carrom_gameplay_asset_21
+  - first:
+      213: -86138947166937197
+    second: carrom_gameplay_asset_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: carrom_gameplay_asset_0
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 301
+        width: 904
+        height: 909
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a57307f5a29fc2cb0800000000000000
+      internalID: -4887257535218698406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrom_gameplay_asset_1
+      rect:
+        serializedVersion: 2
+        x: 1880
+        y: 1053
+        width: 117
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21744b5d9d0b3724988b669806c2c124
+      internalID: 5539441336284037933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrom_gameplay_asset_2
+      rect:
+        serializedVersion: 2
+        x: 1876
+        y: 866
+        width: 117
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b238215686d8d9a4d83de50be952bfac
+      internalID: 447614496934107750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrom_gameplay_asset_3
+      rect:
+        serializedVersion: 2
+        x: 1880
+        y: 685
+        width: 114
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65db7f240a147ca4abe234b032909675
+      internalID: -6821072170193444326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrom_gameplay_asset_4
+      rect:
+        serializedVersion: 2
+        x: 1862
+        y: 481
+        width: 154
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1fd255569786f5418374a07ed02a941
+      internalID: -4634984874400595278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrom_gameplay_asset_5
+      rect:
+        serializedVersion: 2
+        x: 1827
+        y: 240
+        width: 199
+        height: 203
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0c4d65ada6b7104ea600a85b2a2322b
+      internalID: -3520055986005099405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrom_gameplay_asset_6
+      rect:
+        serializedVersion: 2
+        x: 1834
+        y: 14
+        width: 166
+        height: 173
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 653e62658f1688840a4f673fcef765d5
+      internalID: 6373264453532794270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrom_gameplay_asset_7
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 45
+        width: 809
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 659de1bb2992f8446a725d54c707acf6
+      internalID: -8242173664592535137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrom_gameplay_asset_8
+      rect:
+        serializedVersion: 2
+        x: 1735
+        y: 1223
+        width: 299
+        height: 174
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77f400bc2afbad648b5e5fecd55c2aab
+      internalID: -6325950316774559280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrom_gameplay_asset_9
+      rect:
+        serializedVersion: 2
+        x: 1741
+        y: 1436
+        width: 238
+        height: 239
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf87c9340c604a742899bfd0e89045c7
+      internalID: -4744992845632926300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrom_gameplay_asset_10
+      rect:
+        serializedVersion: 2
+        x: 1741
+        y: 1744
+        width: 237
+        height: 239
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3fbbbd1cce7fa242912e83747814161
+      internalID: -1521253489495856902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrom_gameplay_asset_11
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 1311
+        width: 126
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0a42f9bc4a9c4149bf8683e5b6569a3
+      internalID: -756580194018130385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrom_gameplay_asset_12
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 1312
+        width: 126
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de7c1fd508330e147923e5e912f5ea03
+      internalID: 2698614903551561847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrom_gameplay_asset_13
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 1549
+        width: 711
+        height: 446
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5921568773c2d14498836c9872169e8f
+      internalID: -8144591589462318168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrom_gameplay_asset_14
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 1544
+        width: 724
+        height: 455
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f55dadacc230e543a662ab25d255127
+      internalID: 8523293972733258795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      carrom_gameplay_asset_0: -4887257535218698406
+      carrom_gameplay_asset_1: 5539441336284037933
+      carrom_gameplay_asset_10: -1521253489495856902
+      carrom_gameplay_asset_11: -756580194018130385
+      carrom_gameplay_asset_12: 2698614903551561847
+      carrom_gameplay_asset_13: -8144591589462318168
+      carrom_gameplay_asset_14: 8523293972733258795
+      carrom_gameplay_asset_15: 773791720486912486
+      carrom_gameplay_asset_16: -5459458663489784065
+      carrom_gameplay_asset_17: 1601904714181684922
+      carrom_gameplay_asset_18: -107093010569610738
+      carrom_gameplay_asset_19: 968306847982384309
+      carrom_gameplay_asset_2: 447614496934107750
+      carrom_gameplay_asset_20: -2790483441146071956
+      carrom_gameplay_asset_21: 7401305568333892241
+      carrom_gameplay_asset_22: -86138947166937197
+      carrom_gameplay_asset_3: -6821072170193444326
+      carrom_gameplay_asset_4: -4634984874400595278
+      carrom_gameplay_asset_5: -3520055986005099405
+      carrom_gameplay_asset_6: 6373264453532794270
+      carrom_gameplay_asset_7: -8242173664592535137
+      carrom_gameplay_asset_8: -6325950316774559280
+      carrom_gameplay_asset_9: -4744992845632926300
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
