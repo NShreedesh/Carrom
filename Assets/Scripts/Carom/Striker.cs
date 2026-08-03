@@ -108,37 +108,42 @@ namespace Scripts.Carom
             ResetStriker();
 
             if (GameManager.Instance.GetGameState() != GameState.Play) return;
+
+            bool strikerCollided = IsStrikerCollidedWithCoin();
             ChangeStrikerWithSliderValue();
-            if (GameManager.Instance.GetPlayerType() == PlayerType.Bot)
+
+            if (!strikerCollided)
             {
-                try
+                if (GameManager.Instance.GetPlayerType() == PlayerType.Bot)
                 {
-                    await TryBotStrike();
+                    try
+                    {
+                        await TryBotStrike();
+                    }
+                    catch (Exception)
+                    {
+                    }
                 }
-                catch (Exception)
+                else
                 {
+                    ShootStriker();
                 }
             }
-            else
-            {
-                ShootStriker();
-            }
-            CheckIfStrikerCollidedWithCoin();
         }
 
-        private void CheckIfStrikerCollidedWithCoin()
+        private bool IsStrikerCollidedWithCoin()
         {
-            if (isDraggingStriker) return;
+            if (isDraggingStriker) return false;
             CaromSlider caromSlider = caromSliders[GameManager.Instance.GetCurrentPlayerTurn()];
-            if (caromSlider.GetIsSliderBeingUsed()) return;
+            if (caromSlider.GetIsSliderBeingUsed()) return false;
             if (isMovingLeft && transform.position.x <= caromSlider.GetSliderMinValue())
             {
                 isMovingLeft = false;
             }
 
             Collider2D hitInfo = Physics2D.OverlapCircle(transform.position, strikerRadius, coinLayerMask);
-            if (hitInfo is null) return;
-            if (!hitInfo.TryGetComponent(out Coin coin)) return;
+            if (hitInfo is null) return false;
+            if (!hitInfo.TryGetComponent(out Coin coin)) return false;
 
             switch (isMovingLeft)
             {
@@ -162,6 +167,8 @@ namespace Scripts.Carom
                 caromSlider.SetSliderValue(caromSlider.GetSliderMinValue());
                 isMovingLeft = true;
             }
+
+            return true;
         }
 
         private void ChangeStrikerWithSliderValue()
