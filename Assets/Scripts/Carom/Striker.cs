@@ -186,6 +186,10 @@ namespace Scripts.Carom
             if (isStrikerShot) return;
             isStrikerShot = true;
 
+            int maxPointValue = int.MinValue;
+            botStrikeDataResult = null;
+            _maxPointIndex = -1;
+
             int pocketToUse = 2;
 
             for (int i = 0; i < _botStrikeData.Length; i++)
@@ -248,29 +252,17 @@ namespace Scripts.Carom
                             _botStrikeData[i].points[j] -= 1;
                         }
                     }
-                }
-            }
 
-            await Awaitable.WaitForSecondsAsync(1f, destroyCancellationToken);
-
-            botStrikeDataResult = null;
-            _maxPointIndex = -1;
-            int maxPointValue = int.MinValue;
-
-            for (int i = 0; i < _botStrikeData.Length; i++)
-            {
-                BotStrikeData data = _botStrikeData[i];
-
-                for (int j = 0; j < data.points.Length; j++)
-                {
-                    if (data.points[j] > maxPointValue)
+                    if (_botStrikeData[i].points[j] > maxPointValue)
                     {
-                        maxPointValue = data.points[j];
-                        botStrikeDataResult = data;
+                        maxPointValue = _botStrikeData[i].points[j];
+                        botStrikeDataResult = _botStrikeData[i];
                         _maxPointIndex = j;
                     }
                 }
             }
+
+            await Awaitable.WaitForSecondsAsync(1f, destroyCancellationToken);
 
             if (botStrikeDataResult != null)
             {
