@@ -210,6 +210,8 @@ namespace Scripts.Carom
             {
                 if (coins[i].IsHoled) continue;
 
+                float radius = coins[i].GetCollider().bounds.size.x / 2;
+
                 for (int j = 0; j < pocketToUse; j++)
                 {
                     Coin selectedCoin = coins[i];
@@ -218,7 +220,7 @@ namespace Scripts.Carom
 
                     Vector2 distanceVector = pocketPos - piecePos;
                     Vector2 direction = distanceVector.normalized;
-                    Vector2 impactPoint = piecePos - (direction * (strikerRadius + 0.1602883f));
+                    Vector2 impactPoint = piecePos - (direction * (strikerRadius + radius));
 
                     _botStrikeData[i].direction[j] = direction;
                     _botStrikeData[i].impactPoints[j] = impactPoint; 
@@ -226,10 +228,10 @@ namespace Scripts.Carom
 
                     Vector2 previousPosition = piecePos;
 
-                    for (float d = 0; d <= distanceVector.magnitude; d += 0.1602883f)
+                    for (float d = 0; d <= distanceVector.magnitude; d += radius)
                     {
                         Vector2 pos = previousPosition + direction * d;
-                        Collider2D[] results = Physics2D.OverlapCircleAll(pos, 0.1602883f, coinLayerMask);
+                        Collider2D[] results = Physics2D.OverlapCircleAll(pos, radius, coinLayerMask);
 
                         foreach (Collider2D c in results)
                         {

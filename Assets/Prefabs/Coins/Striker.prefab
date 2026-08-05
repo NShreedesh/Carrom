@@ -27,7 +27,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.45, y: 0.45, z: 0.45}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1660191046821216585}
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -4634984874400595278, guid: 80698ce4e5fe7da4c8d4c5a4daff19d6, type: 3}
+  m_Sprite: {fileID: -2694264292855394324, guid: e8a7ec08987464b40961fc40b8fdd19f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -123,7 +123,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 0.57, y: 0.57, z: 0.57}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7933089652561037745}
@@ -226,7 +226,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0.0029412976}
-  m_Radius: 0.35192856
+  m_Radius: 0.38
 --- !u!50 &4830177259820499952
 Rigidbody2D:
   serializedVersion: 5
@@ -349,7 +349,7 @@ MonoBehaviour:
   collider: {fileID: 1069249607195401020}
   coinType: 3
   holeEnterDuration: 0.2
-  coinInHoleScale: {x: 0.4, y: 0.4, z: 0.4}
+  coinInHoleScale: {x: 0.3, y: 0.3, z: 0.3}
   <IsHoled>k__BackingField: 0
   strikeHitClip: {fileID: 8300000, guid: 15000b73b274ccb488ae41bb093f3da9, type: 3}
   inHoleClip: {fileID: 8300000, guid: 5cab008ff6ed2f24c916613e4f2e9ba4, type: 3}

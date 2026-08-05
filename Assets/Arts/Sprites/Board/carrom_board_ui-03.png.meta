@@ -1,0 +1,694 @@
+fileFormatVersion: 2
+guid: e8a7ec08987464b40961fc40b8fdd19f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1003962736024774449
+    second: carrom_board_ui-03_0
+  - first:
+      213: -1862729081343009385
+    second: carrom_board_ui-03_1
+  - first:
+      213: 3617446271402250006
+    second: carrom_board_ui-03_2
+  - first:
+      213: 5244949251329281548
+    second: carrom_board_ui-03_3
+  - first:
+      213: 5587111968986532768
+    second: carrom_board_ui-03_4
+  - first:
+      213: 8704568527429456117
+    second: carrom_board_ui-03_5
+  - first:
+      213: 2110723761189893928
+    second: carrom_board_ui-03_6
+  - first:
+      213: -8234197394389057872
+    second: carrom_board_ui-03_7
+  - first:
+      213: 8222163707557969163
+    second: carrom_board_ui-03_8
+  - first:
+      213: 6141245774905210863
+    second: carrom_board_ui-03_9
+  - first:
+      213: 7315909066957610046
+    second: carrom_board_ui-03_10
+  - first:
+      213: -3283655339839985253
+    second: carrom_board_ui-03_11
+  - first:
+      213: -4141451509593019061
+    second: carrom_board_ui-03_12
+  - first:
+      213: -893437856550305192
+    second: carrom_board_ui-03_13
+  - first:
+      213: -1893029236715229787
+    second: carrom_board_ui-03_14
+  - first:
+      213: -5962848025014299469
+    second: carrom_board_ui-03_15
+  - first:
+      213: 1001867376224751881
+    second: carrom_board_ui-03_16
+  - first:
+      213: 5663081085722103913
+    second: carrom_board_ui-03_17
+  - first:
+      213: -8200230167209448557
+    second: carrom_board_ui-03_18
+  - first:
+      213: -4788454589841380929
+    second: carrom_board_ui-03_19
+  - first:
+      213: 4118320314450482415
+    second: carrom_board_ui-03_20
+  - first:
+      213: -6980118432631688767
+    second: carrom_board_ui-03_21
+  - first:
+      213: -82742380111192207
+    second: carrom_board_ui-03_22
+  - first:
+      213: -7877588348781737034
+    second: carrom_board_ui-03_23
+  - first:
+      213: -701783267086233955
+    second: carrom_board_ui-03_24
+  - first:
+      213: 8399019788844531
+    second: carrom_board_ui-03_25
+  - first:
+      213: -8869440273421765602
+    second: carrom_board_ui-03_26
+  - first:
+      213: 4765629293339421082
+    second: carrom_board_ui-03_27
+  - first:
+      213: 9138625606081094417
+    second: carrom_board_ui-03_28
+  - first:
+      213: -5973850384994675107
+    second: carrom_board_ui-03_29
+  - first:
+      213: 8107535182629390707
+    second: carrom_board_ui-03_30
+  - first:
+      213: 3788274318824505279
+    second: carrom_board_ui-03_31
+  - first:
+      213: 4762635132842733171
+    second: carrom_board_ui-03_32
+  - first:
+      213: -8221753092940873609
+    second: carrom_board_ui-03_33
+  - first:
+      213: 5137447544356871291
+    second: carrom_board_ui-03_34
+  - first:
+      213: 8329023836088216094
+    second: carrom_board_ui-03_35
+  - first:
+      213: 2746006593362106204
+    second: carrom_board_ui-03_36
+  - first:
+      213: -9199273933352404760
+    second: carrom_board_ui-03_37
+  - first:
+      213: 3474863620683500780
+    second: carrom_board_ui-03_38
+  - first:
+      213: 4870721017939873939
+    second: carrom_board_ui-03_39
+  - first:
+      213: 2879038906772721832
+    second: carrom_board_ui-03_40
+  - first:
+      213: -2694264292855394324
+    second: carrom_board_ui-03_41
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: carrom_board_ui-03_11
+      rect:
+        serializedVersion: 2
+        x: 3961
+        y: 2449
+        width: 149
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b99e500bddc1e62d0800000000000000
+      internalID: -3283655339839985253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrom_board_ui-03_12
+      rect:
+        serializedVersion: 2
+        x: 4132
+        y: 2449
+        width: 149
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4de33c5bcb9686c0800000000000000
+      internalID: -4141451509593019061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrom_board_ui-03_13
+      rect:
+        serializedVersion: 2
+        x: 4303
+        y: 2449
+        width: 149
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 852ce6bc00fd993f0800000000000000
+      internalID: -893437856550305192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrom_board_ui-03_14
+      rect:
+        serializedVersion: 2
+        x: 4474
+        y: 2450
+        width: 149
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ade82c50fb9ab5e0800000000000000
+      internalID: -1893029236715229787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrom_board_ui-03_22
+      rect:
+        serializedVersion: 2
+        x: 3958
+        y: 1587
+        width: 68
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17f1a916e3a0adef0800000000000000
+      internalID: -82742380111192207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrom_board_ui-03_23
+      rect:
+        serializedVersion: 2
+        x: 4028
+        y: 1585
+        width: 55
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bbcb10522f2da290800000000000000
+      internalID: -7877588348781737034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrom_board_ui-03_24
+      rect:
+        serializedVersion: 2
+        x: 4084
+        y: 1587
+        width: 56
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9e030836d3c246f0800000000000000
+      internalID: -701783267086233955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrom_board_ui-03_25
+      rect:
+        serializedVersion: 2
+        x: 4142
+        y: 1587
+        width: 56
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fdb9fe2dd6dd1000800000000000000
+      internalID: 8399019788844531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrom_board_ui-03_26
+      rect:
+        serializedVersion: 2
+        x: 4199
+        y: 1585
+        width: 60
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e14f62a401b69e480800000000000000
+      internalID: -8869440273421765602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrom_board_ui-03_27
+      rect:
+        serializedVersion: 2
+        x: 4277
+        y: 1587
+        width: 89
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9921b8c79ae22240800000000000000
+      internalID: 4765629293339421082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrom_board_ui-03_28
+      rect:
+        serializedVersion: 2
+        x: 4364
+        y: 1585
+        width: 55
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 113a0c9f19be2de70800000000000000
+      internalID: 9138625606081094417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrom_board_ui-03_29
+      rect:
+        serializedVersion: 2
+        x: 4420
+        y: 1587
+        width: 26
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d56df05c9be981da0800000000000000
+      internalID: -5973850384994675107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrom_board_ui-03_30
+      rect:
+        serializedVersion: 2
+        x: 4447
+        y: 1585
+        width: 55
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3794b940b40c38070800000000000000
+      internalID: 8107535182629390707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrom_board_ui-03_31
+      rect:
+        serializedVersion: 2
+        x: 4522
+        y: 1567
+        width: 62
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbff44dfb67a29430800000000000000
+      internalID: 3788274318824505279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrom_board_ui-03_32
+      rect:
+        serializedVersion: 2
+        x: 4586
+        y: 1585
+        width: 63
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37ee2e77b67481240800000000000000
+      internalID: 4762635132842733171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrom_board_ui-03_33
+      rect:
+        serializedVersion: 2
+        x: 4650
+        y: 1586
+        width: 39
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7704a486f1776ed80800000000000000
+      internalID: -8221753092940873609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrom_board_ui-03_34
+      rect:
+        serializedVersion: 2
+        x: 4689
+        y: 1587
+        width: 28
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7c189d7251eb4740800000000000000
+      internalID: 5137447544356871291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrom_board_ui-03_41
+      rect:
+        serializedVersion: 2
+        x: 3934
+        y: 986
+        width: 523
+        height: 518
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cefc55586ec0c9ad0800000000000000
+      internalID: -2694264292855394324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c14b1a974297de849aa5809802dc86f4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      carrom_board_ui-03_0: 1003962736024774449
+      carrom_board_ui-03_1: -1862729081343009385
+      carrom_board_ui-03_10: 7315909066957610046
+      carrom_board_ui-03_11: -3283655339839985253
+      carrom_board_ui-03_12: -4141451509593019061
+      carrom_board_ui-03_13: -893437856550305192
+      carrom_board_ui-03_14: -1893029236715229787
+      carrom_board_ui-03_15: -5962848025014299469
+      carrom_board_ui-03_16: 1001867376224751881
+      carrom_board_ui-03_17: 5663081085722103913
+      carrom_board_ui-03_18: -8200230167209448557
+      carrom_board_ui-03_19: -4788454589841380929
+      carrom_board_ui-03_2: 3617446271402250006
+      carrom_board_ui-03_20: 4118320314450482415
+      carrom_board_ui-03_21: -6980118432631688767
+      carrom_board_ui-03_22: -82742380111192207
+      carrom_board_ui-03_23: -7877588348781737034
+      carrom_board_ui-03_24: -701783267086233955
+      carrom_board_ui-03_25: 8399019788844531
+      carrom_board_ui-03_26: -8869440273421765602
+      carrom_board_ui-03_27: 4765629293339421082
+      carrom_board_ui-03_28: 9138625606081094417
+      carrom_board_ui-03_29: -5973850384994675107
+      carrom_board_ui-03_3: 5244949251329281548
+      carrom_board_ui-03_30: 8107535182629390707
+      carrom_board_ui-03_31: 3788274318824505279
+      carrom_board_ui-03_32: 4762635132842733171
+      carrom_board_ui-03_33: -8221753092940873609
+      carrom_board_ui-03_34: 5137447544356871291
+      carrom_board_ui-03_35: 8329023836088216094
+      carrom_board_ui-03_36: 2746006593362106204
+      carrom_board_ui-03_37: -9199273933352404760
+      carrom_board_ui-03_38: 3474863620683500780
+      carrom_board_ui-03_39: 4870721017939873939
+      carrom_board_ui-03_4: 5587111968986532768
+      carrom_board_ui-03_40: 2879038906772721832
+      carrom_board_ui-03_41: -2694264292855394324
+      carrom_board_ui-03_5: 8704568527429456117
+      carrom_board_ui-03_6: 2110723761189893928
+      carrom_board_ui-03_7: -8234197394389057872
+      carrom_board_ui-03_8: 8222163707557969163
+      carrom_board_ui-03_9: 6141245774905210863
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
