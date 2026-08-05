@@ -123,7 +123,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.57, y: 0.57, z: 0.57}
+  m_LocalScale: {x: 0.55, y: 0.55, z: 0.55}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7933089652561037745}
@@ -226,7 +226,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0.0029412976}
-  m_Radius: 0.38
+  m_Radius: 0.395
 --- !u!50 &4830177259820499952
 Rigidbody2D:
   serializedVersion: 5
@@ -320,7 +320,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  strikerRadius: 0.14
+  strikerRadius: 0.1975
   botStrikeDataResult:
     impactPoints:
     - {x: 0, y: 0}

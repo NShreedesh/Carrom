@@ -91,6 +91,8 @@ namespace Scripts.Carom
 
         private void Start()
         {
+            strikerRadius = collider.bounds.extents.x;
+
             _botStrikeData = new BotStrikeData[coins.Length];
             for (int i = 0; i < _botStrikeData.Length; i++)
             {
@@ -210,7 +212,8 @@ namespace Scripts.Carom
             {
                 if (coins[i].IsHoled) continue;
 
-                float radius = coins[i].GetCollider().bounds.size.x / 2;
+                float radius = coins[i].GetCollider().bounds.extents.x;
+                print(radius);
 
                 for (int j = 0; j < pocketToUse; j++)
                 {
