@@ -213,7 +213,6 @@ namespace Scripts.Carom
                 if (coins[i].IsHoled) continue;
 
                 float radius = coins[i].GetCollider().bounds.extents.x;
-                print(radius);
 
                 for (int j = 0; j < pocketToUse; j++)
                 {
