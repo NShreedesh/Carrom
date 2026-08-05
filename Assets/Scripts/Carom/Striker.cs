@@ -91,7 +91,7 @@ namespace Scripts.Carom
 
         private void Start()
         {
-            strikerRadius = collider.bounds.extents.x;
+            strikerRadius = collider.bounds.extents.x - 0.05f;
 
             _botStrikeData = new BotStrikeData[coins.Length];
             for (int i = 0; i < _botStrikeData.Length; i++)
